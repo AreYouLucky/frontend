@@ -41,7 +41,7 @@ export default function AppShell({mounts, children,}: { children: React.ReactNod
           onMenuClick={() => setSidebarOpen(!sidebarOpen)}
         />
         <div className="flex-1 overflow-y-auto scroll-slim"  id="app-scroll">
-          <main className="w-full min-h-screen">
+          <main className="w-full min-h-screen overflow-x-hidden">
             {children}
           </main>
           <Footer categories={mounts.categories} />

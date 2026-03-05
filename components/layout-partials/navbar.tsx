@@ -59,7 +59,7 @@ export default function Navbar({
                 backdropFilter: opacity > 0.3 ? "blur(6px)" : "none",
             }}
         >
-            <div className="flex h-full items-center justify-between px-6">
+            <div className="flex h-full items-center justify-between md:px-6 px-2">
                 <div className="flex ">
                     <Image
                         src="/storage/images/logos/dostv.png"
@@ -70,6 +70,7 @@ export default function Navbar({
                     />
 
                     <nav className="hidden lg:flex items-center gap-4 ml-8 font-semibold text-white/80 uppercase text-[13px]">
+                        <PrefetchLink href="#" className="hover:text-gray-300 hover:scale-105 duration-300 flex items-center gap-1"> Home</PrefetchLink>
                         <div
                             className="relative"
                             onMouseEnter={openDropdown}

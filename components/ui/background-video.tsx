@@ -7,7 +7,6 @@ type BackgroundVideoProps = {
 
 export default function BackgroundVideo({
   videoSrc,
-  poster,
   className = "",
   children,
 }: BackgroundVideoProps) {
@@ -18,11 +17,9 @@ export default function BackgroundVideo({
           <video
             className="w-full h-full object-cover border-2 border-black"
             src={videoSrc}
-            poster={poster}
             autoPlay
             muted
             loop
-            playsInline
           />
         )}
       </div>

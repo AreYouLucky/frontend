@@ -1,14 +1,13 @@
 
-const baseURL =
-    typeof window === "undefined"
-        ? process.env.BACKEND_INTERNAL_URL
-        : process.env.NEXT_PUBLIC_BACKEND_API_URL;
+const baseURL = process.env.NEXT_PUBLIC_BACKEND_API_URL;
+import { useQuery } from "@tanstack/react-query";
+import { ProgramsModel } from "@/types/models";
 
 export const loadHomePageMounts = async () => {
   try {
     const res = await fetch(`${baseURL}/api/load-home-page-mounts`, {
       headers: {
-        "X-API-TOKEN": process.env.FRONTEND_API_TOKEN ?? "",
+        "X-API-TOKEN": process.env.NEXT_PUBLIC_FRONTEND_API_TOKEN ?? "",
         "content-type": "application/json",
       },
       next: { revalidate: 1800 },
@@ -25,3 +24,30 @@ export const loadHomePageMounts = async () => {
     return [];
   }
 };
+
+export function useGetFeaturedPrograms() {
+  return useQuery<ProgramsModel[]>({
+    queryKey: ["featured programs"],
+
+    queryFn: async (): Promise<ProgramsModel[]> => {
+      const res = await fetch(
+        `${baseURL}/api/get-featured-programs`,
+        {
+          headers: {
+            Accept: "application/json",
+            "X-API-TOKEN": process.env.NEXT_PUBLIC_FRONTEND_API_TOKEN!,
+            "content-type": "application/json",
+          },
+          next: { revalidate: 1800 },
+        }
+      );
+      if (!res.ok) {
+        throw new Error("Failed to fetch dashboard posts");
+      }
+      return (await res.json()) as ProgramsModel[];
+    },
+
+    staleTime: 1000 * 30,
+  });
+}
+

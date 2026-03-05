@@ -4,7 +4,7 @@ import { MdEmail, MdPhone } from 'react-icons/md'
 
 function Footer({ categories }: { categories: CategoriesModel[] }) {
     return (
-        <footer className='bg-black text-white/80 font-poppins bottom-0 relative py-5 lg:px-18 md:px-10 px-5  lg:text-sm md:text-[12px] text-[10px] mt-10'>
+        <footer className='bg-black text-white/80 font-poppins bottom-0 relative py-5 lg:px-18 md:px-10 px-5  lg:text-sm md:text-[12px] text-[10px] '>
             <div className='grid lg:grid-cols-2 grid-cols-3  py-5 gap-4 border-b border-gray-400/40'>
                 <div className=' grid lg:grid-cols-2 lg:gap-2 gap-1 border-r border-gray-400/40'>
                     <h2 className='text-xl font-bold lg:col-span-2 mb-2 text-white'>Categories</h2>

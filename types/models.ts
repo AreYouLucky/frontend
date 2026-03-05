@@ -6,6 +6,8 @@ export interface CategoriesModel {
   is_active?: number;
   created_at?: string;
   updated_at?: string;
+  category_name?:string;
+  post_category_id?:number;
   [key: string]: unknown;
 }
 
@@ -13,8 +15,10 @@ export const emptyCategory: CategoriesModel = {
   category_id: 0,
   title: "",
   description: "",
+  category_name: '',
   is_banner: 0,
   is_active: 0,
+  
 } as const;
 
 
@@ -196,4 +200,10 @@ export type mountsProps = {
   programs: ProgramsModel[],
   ads: AdvertisementModel[],
   categories: CategoriesModel[],
+}
+
+export type homeMountProps = {
+  recent_posts: PostModel[],
+  featured_posts: PostModel[],
+  featured_categories: CategoriesModel[]
 }

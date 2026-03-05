@@ -255,3 +255,11 @@
 .scroll-slim:hover {
   --sc-size: 6px;
 }
+
+.keen-slider {
+  overflow: visible !important;
+}
+
+.keen-slider__slide {
+  overflow: visible !important;
+}

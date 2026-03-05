@@ -61,7 +61,7 @@ export default function BannerCarousel({ banners, }: { banners: BannerModel[]; }
                 {banners.map((banner) => (
                     <div
                         key={banner.banner_id}
-                        className="embla__slide relative flex-[0_0_100%] h-90 md:h-130 lg:h-170 bg-red-500"
+                        className="embla__slide relative flex-[0_0_100%] h-80 md:h-120 lg:h-160 bg-red-500"
                     >
                         <BannerCard banner={banner} />
                     </div>

@@ -9,8 +9,8 @@ import { BsCollectionPlayFill } from "react-icons/bs";
 export default function BannerCardElements({ banner }: { banner: BannerModel }) {
     return (
         <div className='w-full bg-linear-to-b from-black/60 via-transparent to-transparent from-1% via-20% to-90%'>
-            <div className="grid h-90 md:h-130 lg:h-170 w-full grid-cols-2 lg:grid-cols-5 md:gap-4 lg:gap-8 gap-3 p-3 md:p-6 lg:p-12 bg-linear-to-l from-black/10 to-black/90">
-                <div className="flex flex-col justify-center gap-1 md:gap-3 lg:col-span-2 lg:-mt-8">
+            <div className="grid h-80 md:h-120 lg:h-160 w-full grid-cols-2 lg:grid-cols-5 md:gap-4 lg:gap-8 gap-3 p-3 md:p-6 lg:p-12 bg-linear-to-l from-black/10 to-black/90 ">
+                <div className="flex flex-col justify-center gap-1 md:gap-3 lg:col-span-2 lg:-mt-8 ">
                     {banner?.highlight_text && [2, 6].includes(banner?.type) && (
                         <div className=" flex items-center gap-0.5 lg:gap-1 uppercase rounded px-1.5 md:px-2 lg:px-2.5 py-px md:py-0.5 bg-[#004a95] w-fit text-[7px] md:text-[9.5px] lg:text-[10px] font-semibold tracking-wide opacity-90">
                             <FaCircleInfo className="text-[9px] md:text-[11px]" />
@@ -71,7 +71,7 @@ export default function BannerCardElements({ banner }: { banner: BannerModel }) 
                             width={900}
                             height={500}
                             sizes="(max-width: 768px) 100vw, 768px"
-                            className="aspect-12/5 w-auto h-auto max-h-96 max-w-3xl overflow-hidden rounded-lg object-cover shadow-sm lg:shadow-md shadow-[#00aeef]  hover:shadow-xl hover:scale-105 duration-300"
+                            className="aspect-12/5 w-auto h-auto max-h-96 max-w-3xl overflow-hidden rounded-lg object-cover shadow-sm lg:shadow-md shadow-[#00aeef]  "
                         />
 
                     )}
