@@ -18,7 +18,7 @@ export default function HorizontalSlider({
         loop: true,
         drag: !disabled,
         slides: {
-            perView: 2,
+            perView: 3,
             spacing: 8,
             origin: "auto",
         },
@@ -30,14 +30,14 @@ export default function HorizontalSlider({
         breakpoints: {
             "(min-width: 768px)": {
                 slides: {
-                    perView: 4,
-                    spacing: 8,
+                    perView: 5,
+                    spacing: 10,
                 },
             },
             "(min-width: 1024px)": {
                 slides: {
-                    perView: 6,
-                    spacing: 20,
+                    perView: 7,
+                    spacing: 15,
                 },
             },
         },

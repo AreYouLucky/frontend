@@ -6,6 +6,7 @@ import Socials from "./socials";
 import { useEffect, useState } from "react";
 import PrefetchLink from "./prefetch-link";
 import { ProgramsModel } from "@/types/models";
+import Link from "next/link";
 
 export default function Navbar({
     onMenuClick,
@@ -61,16 +62,19 @@ export default function Navbar({
         >
             <div className="flex h-full items-center justify-between md:px-6 px-2">
                 <div className="flex ">
-                    <Image
-                        src="/storage/images/logos/dostv.png"
-                        alt="DOSTV Logo"
-                        width={120} height={100}
-                        className="h-auto w-20 md:w-28"
-                        priority
-                    />
+                    <div className="h-auto w-20 md:w-28">
+                        <Link href="/">
+                            <Image
+                                src="/storage/images/logos/dostv.png"
+                                alt="DOSTV Logo"
+                                width={120} height={100}
+                                className="h-auto w-20 md:w-28"
+                                priority
+                            />
+                        </Link>
+                    </div>
 
                     <nav className="hidden lg:flex items-center gap-4 ml-8 font-semibold text-white/80 uppercase text-[13px]">
-                        <PrefetchLink href="#" className="hover:text-gray-300 hover:scale-105 duration-300 flex items-center gap-1"> Home</PrefetchLink>
                         <div
                             className="relative"
                             onMouseEnter={openDropdown}
@@ -79,7 +83,7 @@ export default function Navbar({
                             <button
                                 onClick={toggleDropdown}
                                 className="flex items-center gap-2 text-white/80 uppercase text-[13px]"
-                            > 
+                            >
                                 Programs
                                 <ChevronDown
                                     size={16}
@@ -91,22 +95,22 @@ export default function Navbar({
                             <div
                                 className={`absolute border border-white/10 py-2 top-full left-0 mt-2 w-56 bg-gray-950/90 text-white rounded-lg shadow-xl n transition-all duration-300 
                                     ${dropdownOpen ? "opacity-100 translate-y-0 visible" : "opacity-0 -translate-y-2 invisible"}`}>
-                                    {programs?.map((program, index) => (
-                                        <PrefetchLink
-                                            key={index}
-                                            href={`/program/${program.slug}`}
-                                            className="block px-4 py-2 hover:bg-gray-100 hover:text-gray-900 transition duration-300 hover:scale-105"
-                                        >
-                                            {program.title}
-                                        </PrefetchLink>
-                                    ))}
+                                {programs?.map((program, index) => (
+                                    <PrefetchLink
+                                        key={index}
+                                        href={`/program/${program.slug}`}
+                                        className="block px-4 py-2 hover:bg-gray-100 hover:text-gray-900 transition duration-300 hover:scale-105"
+                                    >
+                                        {program.title}
+                                    </PrefetchLink>
+                                ))}
                             </div>
                         </div>
 
-                        <PrefetchLink href="#" className="hover:text-gray-300 hover:scale-105 duration-300 flex items-center gap-1"> About</PrefetchLink>
+                        <PrefetchLink href="/about" className="hover:text-gray-300 hover:scale-105 duration-300 flex items-center gap-1"> About</PrefetchLink>
                         <PrefetchLink href="#" className="hover:text-gray-300 hover:scale-105 duration-300 flex items-center gap-1"> Testimonial</PrefetchLink>
                         <PrefetchLink href="#" className="hover:text-gray-300 hover:scale-105 duration-300 flex items-center gap-1">Partners</PrefetchLink>
-                        <PrefetchLink href="#" className="hover:text-gray-300 hover:scale-105 duration-300 flex items-center gap-1">Contacts</PrefetchLink>
+                        <PrefetchLink href="#footer" className="hover:text-gray-300 hover:scale-105 duration-300 flex items-center gap-1">Contacts</PrefetchLink>
                     </nav>
                 </div>
 

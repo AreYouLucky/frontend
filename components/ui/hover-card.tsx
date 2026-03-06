@@ -38,13 +38,13 @@ export default function HoverCard({ title, description, image, banner = "", vide
       onMouseEnter={handleEnter}
       onMouseLeave={handleLeave}
     >
-      <div className=" aspect-819/1024 hover:scale-y-105 duration-300">
+      <div className=" aspect-819/1024 hover:scale-y-105 duration-300 shadow-lg shadow-white/20 rounded-lg bg-black">
         <ImageLoader
           src={`/storage/images/post_images/thumbnails/${image}`}
           alt={title}
           width={819}
           height={1024}
-          className="w-full h-full object-cover rounded-lg border border-white/20"
+          className="w-full h-full object-contain shadow-sm shadow-white/20 rounded-lg border border-white/40"
         />
       </div>
       <AnimatePresence>
@@ -80,7 +80,7 @@ export default function HoverCard({ title, description, image, banner = "", vide
             </span>
 
             <div className="px-4 pt-2 pb-4">
-              <h3 className="text-[16px] font-semibold text-white relative">{title}</h3>
+              <h3 className="text-[16px] font-semibold text-white relative line-clamp-2">{title}</h3>
               <p className="mt-2 text-[10px] text-justify text-gray-200 line-clamp-3 ">
                 {description}
               </p>

@@ -8,9 +8,9 @@ import { BsCollectionPlayFill } from "react-icons/bs";
 
 export default function BannerCardElements({ banner }: { banner: BannerModel }) {
     return (
-        <div className='w-full bg-linear-to-b from-black/60 via-transparent to-transparent from-1% via-20% to-90%'>
-            <div className="grid h-80 md:h-120 lg:h-160 w-full grid-cols-2 lg:grid-cols-5 md:gap-4 lg:gap-8 gap-3 p-3 md:p-6 lg:p-12 bg-linear-to-l from-black/10 to-black/90 ">
-                <div className="flex flex-col justify-center gap-1 md:gap-3 lg:col-span-2 lg:-mt-8 ">
+        <div className='w-full bg-linear-to-b from-transparent via-transparent to-zinc-900 via-90% to-100%'>
+            <div className="grid h-68 md:h-120 lg:h-180 w-full grid-cols-2 lg:grid-cols-5 md:gap-4 lg:gap-8 gap-3 p-3 md:p-6 lg:p-12 bg-linear-to-l from-black/10 to-black/90 ">
+                <div className="flex flex-col justify-center gap-1 md:gap-3 lg:col-span-2 lg:-mt-8 lg:pb-15 md:pb-10">
                     {banner?.highlight_text && [2, 6].includes(banner?.type) && (
                         <div className=" flex items-center gap-0.5 lg:gap-1 uppercase rounded px-1.5 md:px-2 lg:px-2.5 py-px md:py-0.5 bg-[#004a95] w-fit text-[7px] md:text-[9.5px] lg:text-[10px] font-semibold tracking-wide opacity-90">
                             <FaCircleInfo className="text-[9px] md:text-[11px]" />
@@ -63,7 +63,7 @@ export default function BannerCardElements({ banner }: { banner: BannerModel }) 
                         )}
                     </button>
                 </div>
-                <div className="flex items-center justify-end lg:col-span-3  ">
+                <div className="flex items-center justify-end lg:col-span-3  lg:pb-15 md:pb-10">
                     {banner?.type && [2, 3].includes(banner?.type) && (
                         <Image
                             src={`/storage/images/banners/${banner?.media}`}

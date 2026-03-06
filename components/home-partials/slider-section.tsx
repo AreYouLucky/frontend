@@ -7,10 +7,8 @@ import HoverCard from "@/components/ui/hover-card"
 import Modal from "@/components/ui/modal"
 import PostPreview from "@/components/ui/post-preview"
 
-export default function SliderSection({
-    posts,
-}: {
-    posts: PostModel[]
+export default function SliderSection({ posts, program= "", program_code = ""}: {
+    posts: PostModel[], program?: string, program_code?: string
 }) {
 
     const [activePost, setActivePost] = useState<PostModel | null>(null)
@@ -32,7 +30,7 @@ export default function SliderSection({
                             video={post.trailer ?? ""}
                             banner={post.banner ?? ""}
                             categories={post.categories}
-                            program_code={post.post_program.code ?? ""}
+                            program_code={ program ?? post.post_program.code}
                         />
                     </div>
                 ))}
@@ -47,8 +45,8 @@ export default function SliderSection({
                         title={activePost.title ?? ""}
                         date_published={activePost.date_published ?? ""}
                         slug={activePost.slug ?? ""}
-                        program={activePost.post_program.title ?? ""}
-                        program_slug={activePost.post_program.code ?? ""}
+                        program={program ?? activePost.post_program.title }
+                        program_slug={program_code ??activePost.post_program.code}
                         excerpt={activePost.excerpt ?? ""}
                         thumbnail={activePost.thumbnail ?? ""}
                         banner={activePost.banner}

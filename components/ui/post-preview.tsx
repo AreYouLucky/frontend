@@ -68,9 +68,9 @@ function PostPreview({
                                 {excerpt}
                             </p>
                             <div className="flex gap-1 mt-2 flex-wrap">
-                                {categories?.map((category, index) => (
+                                {categories?.map((category) => (
                                     <div
-                                        key={index}
+                                        key={category.post_category_id}
                                         className="text-white text-[11px] py-px px-2 border border-white/60 rounded-lg shrink-0"
                                     >
                                         {category.category_name}
