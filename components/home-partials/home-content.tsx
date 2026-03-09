@@ -18,6 +18,7 @@ export default function HomeContent({ props }: { props: homeMountProps }) {
                         </h1>
                     </div>
                     <div className='relative'>
+                        {/* <div className="h-1 w-full bg-linear-to-r from-transparent via-[#00aeef] to-transparent" /> */}
                         <SliderSection posts={props.featured_posts} />
                     </div>
                 </div>
@@ -35,7 +36,7 @@ export default function HomeContent({ props }: { props: homeMountProps }) {
                     </div>
                 </div>
                 <div className="lg:px-8 md:px-5 px-5 md:pt-10 md:pb-8 pt-7 pb-4">
-                    <div className="border-b border-white/40"></div>
+                    {/* <div className="border-b border-white/40"></div> */}
                 </div>
                 <div >
                     <ProgramSection />
@@ -49,6 +50,7 @@ export default function HomeContent({ props }: { props: homeMountProps }) {
                             </h1>
                         </div>
                         <div className='w-full flex lg:flex-row flex-col items-center justify-center'>
+
                             <WeatherForecast />
                             <Weather />
                         </div>

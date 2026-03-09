@@ -6,6 +6,7 @@ import "./globals.css";
 import { loadNavigationData } from '@/hooks/init/init';
 import { BackgroundProvider } from '@/components/layout-partials/background-context';
 import AppShell from '@/components/layout-partials/app-shell';
+import Ads from '@/components/home-partials/advertisements/ads';
 
 export const metadata: Metadata = {
     metadataBase: new URL("https://dostv.ph"),
@@ -65,7 +66,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
     return (
         <html lang="en" className={`${montserrat.variable} ${poppins.variable}`}>
             <body className="h-screen max-w-7xl overflow-hidden font-montserrat">
-
+                <Ads ads={mounts.advertisements} />
                 <BackgroundProvider>
                     <div className="fixed inset-0 -z-20" style={{ background: "var(--app-bg)" }}>
                         <div className="absolute inset-0" style={{ background: "var(--app-radial)" }} />

@@ -8,7 +8,7 @@ export default async function HomePage() {
   const homePageMounts = await loadHomePageMounts();
   return (
     <Splash>
-      <div className='bg-zinc-900/80'>
+      <div className='bg-[#050505]/60'>
         <Banner banners={homePageMounts.banners} />
         <div className='lg:-mt-30 md:-mt-20 mt-2 pb-5'>
           <HomeContent props={homePageMounts} />

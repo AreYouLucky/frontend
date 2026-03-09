@@ -116,6 +116,8 @@ export interface PostModel {
   categories: CategoriesModel[];
   season: number | null;
   regions: RegionModel[];
+  current_page?: number;
+  last_page?: number;
 }
 
 
@@ -180,6 +182,7 @@ export interface ProgramSeasonModel {
   description: string | null;
   thumbnail: string | null;
   season: number | null;
+  posts: PostModel[];
   [key: string | number]: unknown;
 }
 
@@ -206,4 +209,18 @@ export type homeMountProps = {
   recent_posts: PostModel[],
   featured_posts: PostModel[],
   featured_categories: CategoriesModel[]
+}
+
+export type ProgramSeasonsPosts = {
+  seasons: ProgramSeasonModel[],
+  program: ProgramsModel
+}
+
+export type ProgramPosts = {
+  posts: {
+    current_page: number
+    last_page: number
+    data: PostModel[]
+  }
+  program: ProgramsModel
 }

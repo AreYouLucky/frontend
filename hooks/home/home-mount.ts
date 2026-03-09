@@ -43,7 +43,8 @@ export function useGetFeaturedPrograms() {
         }
       );
       if (!res.ok) {
-        throw new Error("Failed to fetch dashboard posts");
+        console.error("Get post failed:", res.status);
+        return [];
       }
       return (await res.json()) as ProgramsModel[];
     },
@@ -69,7 +70,8 @@ export function useGetFeaturedProgramsPosts() {
         }
       );
       if (!res.ok) {
-        throw new Error("Failed to fetch dashboard posts");
+        console.error("Get post failed:", res.status);
+        return [];
       }
       return (await res.json()) as ProgramsModel[];
     },
@@ -95,7 +97,8 @@ export function useGetYtList() {
         }
       );
       if (!res.ok) {
-        throw new Error("Failed to fetch dashboard posts");
+        console.error("Get post failed:", res.status);
+        return {} as TopCount;
       }
       return (await res.json()) as TopCount;
     },

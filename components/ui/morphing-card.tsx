@@ -3,6 +3,7 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { X } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { CategoriesModel } from "@/types/models";
 import PostPreview from "./post-preview";
 interface MorphingCardProps {
     id: number;
@@ -14,15 +15,17 @@ interface MorphingCardProps {
     thumbnail: string;
     trailer?: string | null;
     banner?: string | null;
+    categories: CategoriesModel[];
     guest?: string | null;
     className?: string;
     isExpanded?: boolean;
     onExpand?: () => void;
     onCollapse?: () => void;
     children?: React.ReactNode;
+    program_slug?: string | null
 }
 
-export function MorphingCard({ id, title, date_published, slug, program, excerpt, thumbnail, trailer, banner, guest, children, className, isExpanded = false, onExpand, onCollapse,
+export function MorphingCard({ program_slug,categories,id, title, date_published, slug, program, excerpt, thumbnail, trailer, banner, guest, children, className, isExpanded = false, onExpand, onCollapse,
 }: MorphingCardProps) {
     return (
         <>
@@ -68,6 +71,8 @@ export function MorphingCard({ id, title, date_published, slug, program, excerpt
                             guest={guest}
                             banner={banner}
                             trailer={trailer}
+                            categories={categories}
+                            program_slug={program_slug}
                         />
                     ) :
                         <>

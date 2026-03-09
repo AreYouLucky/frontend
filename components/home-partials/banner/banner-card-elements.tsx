@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { MdPermMedia } from "react-icons/md";
 import { PiStarFourBold } from "react-icons/pi";
 import { BsCollectionPlayFill } from "react-icons/bs";
+import Link from 'next/link';
 
 export default function BannerCardElements({ banner }: { banner: BannerModel }) {
     return (
@@ -51,7 +52,7 @@ export default function BannerCardElements({ banner }: { banner: BannerModel }) 
                         {banner?.description}
                     </p>
 
-                    <button className="mt-2 w-fit flex items-center gap-2 cursor-pointer lg:px-4 px-3 lg:py-2 md:py-1.5 py-1 rounded  border bg-white/10 hover:scale-105 transition text-[10px] font-semibold md:text-sm text-[#ffffff]">
+                    <Link href={[3, 4].includes(banner.type) ? `/program/${banner.code}` : banner.url ?? "#"} className="mt-2 w-fit flex items-center gap-2 cursor-pointer lg:px-4 px-3 lg:py-2 md:py-1.5 py-1 rounded  border bg-white/10 hover:scale-105 transition text-[10px] font-semibold md:text-sm text-[#ffffff]">
                         {banner?.type && [3, 4].includes(banner?.type) ? (
                             <>
                                 <BsCollectionPlayFill /> View Episodes
@@ -61,7 +62,7 @@ export default function BannerCardElements({ banner }: { banner: BannerModel }) 
                                 <MdPageview /> Browse Now
                             </>
                         )}
-                    </button>
+                    </Link>
                 </div>
                 <div className="flex items-center justify-end lg:col-span-3  lg:pb-15 md:pb-10">
                     {banner?.type && [2, 3].includes(banner?.type) && (

@@ -46,7 +46,7 @@ export default function ProgramSection() {
                                 </div>
                             </div>
                             <div className="lg:px-8 md:px-5 px-5 md:pt-10 md:pb-8 pt-7 pb-4">
-                                <div className="border-b border-white/40"></div>
+                                {/* <div className="border-b border-white/40"></div> */}
                             </div>
                         </>
                     }

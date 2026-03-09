@@ -13,6 +13,8 @@ export default function SliderSection({ posts, program= "", program_code = ""}: 
 
     const [activePost, setActivePost] = useState<PostModel | null>(null)
 
+    console.log("posts", activePost)
+
     return (
         <div className="relative w-full min-w-0">
             <HorizontalSlider>
@@ -30,7 +32,7 @@ export default function SliderSection({ posts, program= "", program_code = ""}: 
                             video={post.trailer ?? ""}
                             banner={post.banner ?? ""}
                             categories={post.categories}
-                            program_code={ program ?? post.post_program.code}
+                            program_code={ program_code !== "" ? program_code : post.post_program.code}
                         />
                     </div>
                 ))}
@@ -46,7 +48,7 @@ export default function SliderSection({ posts, program= "", program_code = ""}: 
                         date_published={activePost.date_published ?? ""}
                         slug={activePost.slug ?? ""}
                         program={program ?? activePost.post_program.title }
-                        program_slug={program_code ??activePost.post_program.code}
+                        program_slug={ program_code !== "" ? program_code : activePost.post_program.code}
                         excerpt={activePost.excerpt ?? ""}
                         thumbnail={activePost.thumbnail ?? ""}
                         banner={activePost.banner}

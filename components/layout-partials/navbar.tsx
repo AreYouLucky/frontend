@@ -98,7 +98,7 @@ export default function Navbar({
                                 {programs?.map((program, index) => (
                                     <PrefetchLink
                                         key={index}
-                                        href={`/program/${program.slug}`}
+                                        href={`/program/${program.code}`}
                                         className="block px-4 py-2 hover:bg-gray-100 hover:text-gray-900 transition duration-300 hover:scale-105"
                                     >
                                         {program.title}
@@ -110,7 +110,6 @@ export default function Navbar({
                         <PrefetchLink href="/about" className="hover:text-gray-300 hover:scale-105 duration-300 flex items-center gap-1"> About</PrefetchLink>
                         <PrefetchLink href="#" className="hover:text-gray-300 hover:scale-105 duration-300 flex items-center gap-1"> Testimonial</PrefetchLink>
                         <PrefetchLink href="#" className="hover:text-gray-300 hover:scale-105 duration-300 flex items-center gap-1">Partners</PrefetchLink>
-                        <PrefetchLink href="#footer" className="hover:text-gray-300 hover:scale-105 duration-300 flex items-center gap-1">Contacts</PrefetchLink>
                     </nav>
                 </div>
 

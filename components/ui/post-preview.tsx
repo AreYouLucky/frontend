@@ -14,7 +14,7 @@ type PostPreviewProps = {
     trailer?: string | null;
     banner?: string | null;
     guest?: string | null;
-    program_slug: string
+    program_slug?: string | null
     categories: CategoriesModel[]
 }
 
@@ -95,11 +95,13 @@ function PostPreview({
                                     <FaPlay className="text-xs" />
                                     WATCH NOW
                                 </Link>
-                                <Link
-                                    href={`/program/${program_slug}`}
-                                    className="
+                                {program_slug && (
+                                    <Link
+                                        href={`/program/${program_slug}`}
+                                        className="
                                          text-white
                                         hover:bg-gray-200
+                                        hover:text-gray-900
                                         transition
                                         rounded-md
                                         px-5 py-2.5
@@ -109,10 +111,11 @@ function PostPreview({
                                         shadow-lg hover:scale-105 duration-300
                                         border border-white/70
                                     "
-                                >
-                                    <FaPlus className="text-xs" />
-                                    More
-                                </Link>
+                                    >
+                                        <FaPlus className="text-xs" />
+                                        More
+                                    </Link>
+                                )}
                             </div>
 
                         </div>
