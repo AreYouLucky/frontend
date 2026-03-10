@@ -224,3 +224,10 @@ export type ProgramPosts = {
   }
   program: ProgramsModel
 }
+
+export type Partner = {
+  partner_id: number ;
+  label: string | null;
+  description: string | null;
+  featured_image: string | null;
+}

@@ -83,7 +83,7 @@ export default async function ProgramPage({ params }: Props) {
     const program = data.program
     const featured = data.featured_post
     return (
-        <div className="w-full lg:px-13 md:px-5 px-3 pt-16 md:pt-18 lg:pt-20 bg-linear-to-b from-black/50 to-[#050505]/50">
+        <div className="w-full lg:px-13 md:px-5 px-3 pt-16 md:pt-18 lg:pt-20 bg-linear-to-b from-black/50 to-transparent from-0% to-3%">
             <SetBg thumbnail={`/storage/images/program_images/thumbnails/${program.image}`} />
             <div className="flex flex-col md:flex-row gap-4 items-start pb-8 ">
                 <div className="flex-1 lg:pr-15 md:p-6 p-4 py-4 border-r border-white/40 ">

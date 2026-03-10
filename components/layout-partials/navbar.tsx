@@ -109,7 +109,7 @@ export default function Navbar({
 
                         <PrefetchLink href="/about" className="hover:text-gray-300 hover:scale-105 duration-300 flex items-center gap-1"> About</PrefetchLink>
                         <PrefetchLink href="#" className="hover:text-gray-300 hover:scale-105 duration-300 flex items-center gap-1"> Testimonial</PrefetchLink>
-                        <PrefetchLink href="#" className="hover:text-gray-300 hover:scale-105 duration-300 flex items-center gap-1">Partners</PrefetchLink>
+                        <PrefetchLink href="/partners" className="hover:text-gray-300 hover:scale-105 duration-300 flex items-center gap-1">Partners</PrefetchLink>
                     </nav>
                 </div>
 
