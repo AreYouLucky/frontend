@@ -18,7 +18,7 @@ const LinkPlayer = ({ url = "", platform = "" }: VideoEmbedProps) => {
   const getEmbedUrl = () => {
     switch (platform) {
       case "YouTube":
-        return `https://www.youtube.com/embed/${extractYouTubeId(url)}?autoplay=1`;
+        return `https://www.youtube.com/embed/${extractYouTubeId(url)}?enablejsapi=1&autoplay=1&rel=0&modestbranding=1&playsinline=1`;
 
       case "Facebook":
         return `https://www.facebook.com/plugins/video.php?href=${encodeURIComponent(
@@ -43,7 +43,6 @@ const LinkPlayer = ({ url = "", platform = "" }: VideoEmbedProps) => {
         allowFullScreen
         loading="lazy"
         title="Embedded Video"
-        
       />
     </div>
   );

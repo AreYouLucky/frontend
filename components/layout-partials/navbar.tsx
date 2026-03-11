@@ -74,7 +74,7 @@ export default function Navbar({
                         </Link>
                     </div>
 
-                    <nav className="hidden lg:flex items-center gap-4 ml-8 font-semibold text-white/80 uppercase text-[13px]">
+                    <nav className="hidden lg:flex items-center gap-4 ml-8 font-semibold text-white/80 uppercase text-[14px]">
                         <div
                             className="relative"
                             onMouseEnter={openDropdown}
@@ -82,7 +82,7 @@ export default function Navbar({
                         >
                             <button
                                 onClick={toggleDropdown}
-                                className="flex items-center gap-2 text-white/80 uppercase text-[13px]"
+                                className="flex items-center gap-2 text-white/80 uppercase text-[14px]"
                             >
                                 Programs
                                 <ChevronDown
@@ -99,7 +99,7 @@ export default function Navbar({
                                     <PrefetchLink
                                         key={index}
                                         href={`/program/${program.code}`}
-                                        className="block px-4 py-2 hover:bg-gray-100 hover:text-gray-900 transition duration-300 hover:scale-105"
+                                        className="block px-4 py-2 hover:bg-gray-100 hover:text-gray-900 transition duration-300 hover:scale-105 text-[13px]"
                                     >
                                         {program.title}
                                     </PrefetchLink>
@@ -108,7 +108,6 @@ export default function Navbar({
                         </div>
 
                         <PrefetchLink href="/about" className="hover:text-gray-300 hover:scale-105 duration-300 flex items-center gap-1"> About</PrefetchLink>
-                        <PrefetchLink href="#" className="hover:text-gray-300 hover:scale-105 duration-300 flex items-center gap-1"> Testimonial</PrefetchLink>
                         <PrefetchLink href="/partners" className="hover:text-gray-300 hover:scale-105 duration-300 flex items-center gap-1">Partners</PrefetchLink>
                     </nav>
                 </div>

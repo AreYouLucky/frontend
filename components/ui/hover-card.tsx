@@ -49,14 +49,23 @@ export default function HoverCard({ title, description, image, banner = "", vide
       onMouseEnter={handleEnter}
       onMouseLeave={handleLeave}
     >
-      <div className=" aspect-819/1024 hover:scale-y-105 duration-300 shadow-lg shadow-white/20 rounded-lg bg-black relative hover:border hover:border-[#00aeef]">
+      <div className="aspect-819/1024 hover:scale-y-105 duration-300 shadow-lg shadow-white/20 rounded-lg bg-black relative hover:border hover:border-[#00aeef] overflow-hidden">
+        {image && (
+          <div
+            className="absolute inset-0 bg-center bg-cover blur-sm scale-110 opacity-100"
+            style={{
+              backgroundImage: `url(/storage/images/post_images/thumbnails/${image})`,
+            }}
+          />
+        )}
         <ImageLoader
           src={`/storage/images/post_images/thumbnails/${image}`}
           alt={title}
           width={819}
           height={1024}
-          className="w-full h-full object-contain shadow-sm shadow-white/20 rounded-lg border border-white/40"
+          className="relative w-full h-full object-contain rounded-lg border border-white/60 shadow-sm shadow-white/20"
         />
+
         {isNew(date) && (
           <span className="rounded-tr-sm bg-red-500/80 lg:px-4 px-3 py-1 font-semibold text-white md:text-xs text-[10px] absolute bottom-0 left-0">
             NEW
