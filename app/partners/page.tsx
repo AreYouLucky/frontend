@@ -53,7 +53,7 @@ export default async function PartnersPage() {
                 <div className="border-b border-white/40"></div>
             </div>
 
-            <section id='partners-grid' className='mx-auto w-full  px-8 md:px-15 py-8 md:py-15 z-10'>
+            <section id='partners-grid' className='mx-auto w-full  px-8 md:px-15 py-8 md:py-15 z-10 fade-right'>
                 <div className='mb-8 flex flex-col gap-4 md:mb-10 md:flex-row md:items-end md:justify-between'>
                     <div>
                         <h2 className='mt-2 text-2xl font-black md:text-3xl px-4 border-l-2 border-white/40 text-white/80 relative'>

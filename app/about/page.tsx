@@ -64,7 +64,7 @@ const timeline: TimelineItem[] = [
 export default function AboutPage() {
   return (
     <div className="w-full bg-linear-to-b from-zinc-950  to-transparent from-0% to-30%  text-white">
-      <div className="relative lg:pt-20 md:pt-18 pt-16">
+      <div className="relative lg:pt-20 md:pt-18 pt-16 fade-up">
         <LinkPlayer
           url="https://www.youtube.com/watch?v=Ztia1UwAAM4&list=TLGGnlpGzPHzVtgwOTAzMjAyNg&t=9s"
           platform="YouTube"
@@ -75,7 +75,7 @@ export default function AboutPage() {
         <div className="overflow-hidden border-y border-white/10 bg-zinc-950/80 shadow-[0_24px_80px_rgba(0,0,0,0.55)] backdrop-blur">
           <div className="h-1 w-full bg-linear-to-r from-transparent via-[#0931e5] to-transparent" />
           <div className="grid gap-8 p-6 md:grid-cols-[1.15fr_1fr] md:p-10 lg:p-20">
-            <div>
+            <div className="fade-right">
               <p className="mb-4 inline-flex rounded-full border border-[#00aeef]/40 bg-[#004a95]/15 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-white">
                 About DOSTv
               </p>
@@ -90,7 +90,7 @@ export default function AboutPage() {
               </p>
             </div>
 
-            <div className="grid grid-cols-2 gap-3 sm:gap-4">
+            <div className="grid grid-cols-2 gap-3 sm:gap-4 fade-left">
               {stats.map((stat) => (
                 <article
                   key={stat.label}

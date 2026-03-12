@@ -14,7 +14,7 @@ export default function VideoInfo({ currentPost, className, children }: { curren
             <div className="w-full">
                 <LinkPlayer url={currentPost.url as string} platform={currentPost.platform as string} />
                 <div className='w-full relative  text-white flex flex-col md:flex-row md:pt-5  md:pb-6 py-4 lg:px-10 md:px-8 justify-between'>
-                    <div className="md:pr-12 border-b md:border-b-0  pb-6 md:pb-0 border-white/40 flex flex-col  ">
+                    <div className="md:pr-12 border-b md:border-b-0  pb-6 md:pb-0 border-white/40 flex flex-col  fade-right">
                         <div className='py-5'>
                             <h1 className="md:text-4xl text-xl font-bold inter-bold relative tracking-wide pl-4 ">{currentPost.title}</h1>
                             <div className="px-4">

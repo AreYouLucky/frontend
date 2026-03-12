@@ -34,7 +34,7 @@ const LinkPlayer = ({ url = "", platform = "" }: VideoEmbedProps) => {
   };
 
   return (
-    <div className="w-full lg:h-180 md:h-120 h-80  border-b border-white/50">
+    <div className="w-full lg:h-180 md:h-120 h-80  border-b border-white/50 fade-up">
       <iframe
         src={getEmbedUrl()}
         className="w-full h-full"
