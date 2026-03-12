@@ -48,6 +48,7 @@ export default function BannerCardElements({ banner }: { banner: BannerModel }) 
                     )
                     }
 
+
                     <p className="text-[9px] md:text-[12px] lg:text-[14.3px] leading-snug lg:leading-relaxed max-w-xl font-regular tracking-normal text-justify lg:line-clamp-6 md:line-clamp-6 line-clamp-5 text-white/90">
                         {banner?.description}
                     </p>

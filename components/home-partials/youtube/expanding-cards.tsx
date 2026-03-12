@@ -198,22 +198,25 @@ export function ExpandingCards({
                                     <Link
                                         href={`https://www.youtube.com/watch?v=${card.videoId}`}
                                         target="_blank"
-                                        className="flex flex-row gap-3 fade-up bg-black/60 rounded-lg lg:py-3 py-2 px-2 lg:px-4 items-start md:mb-2 hover:bg-black transition border border-[#00aeef]/40"
+                                        className="flex flex-row gap-3 fade-up bg-black/60 rounded-lg lg:py-3 py-2 px-2 lg:px-4 items-center md:mb-2 hover:bg-black transition border border-[#00aeef]/40"
                                     >
                                         <div className="text-center flex flex-col justify-center gap-1 items-center">
-                                            <span className="text-white font-extrabold text-2xl md:text-5xl rounded-md px-2 py-1 w-fit h-fit">
+                                            <span className="lg:text-[70px] md:text-[50px] text-[30px]
+                                                [-webkit-text-stroke:1px_white] font-extrabold text-zinc-900/60 px-2 w-fit h-fit">
                                                 #{index + 1}
                                             </span>
                                         </div>
 
-                                        <div className="flex flex-col flex-1 min-w-0 h-full md:pt-2 lg:pt-0">
-                                            <h3 className="text-[11.5px] lg:text-[14px] md:text-[13px] font-bold text-white leading-snug mb-1">
-                                                {card.title}
-                                            </h3>
+                                        <div className="flex flex-col flex-1 items-center justify-center min-w-0 h-full md:pt-2 lg:pt-0">
+                                            <div className="grid">
+                                                <h3 className="text-[11px] lg:text-[14px] md:text-[13px] font-bold text-white  mb-1">
+                                                    {card.title}
+                                                </h3>
 
-                                            <p className="hidden lg:block lg:text-[12.5px] text-[11px] text-slate-300 tracking-tight text-justify whitespace-pre-wrap line-clamp-3 md:line-clamp-4">
-                                                {trimText(card.description, 120)}
-                                            </p>
+                                                <p className="hidden lg:block lg:text-[12.5px] text-[11px] text-slate-300 tracking-tight text-justify whitespace-pre-wrap line-clamp-3 md:line-clamp-4">
+                                                    {trimText(card.description, 120)}
+                                                </p>
+                                            </div>
                                         </div>
                                     </Link>
                                 </motion.div>
@@ -226,7 +229,8 @@ export function ExpandingCards({
                                     className="absolute bottom-0 left-0 right-0 bg-black/40 px-3 py-2"
                                 >
                                     <div className=" text-center flex flex-col justify-center gap-1 items-center">
-                                        <span className="text-white font-extrabold text-sm md:text-5xl rounded-md px-2 py-1 w-fit h-fit">
+                                        <span className="lg:text-[60px] md:text-[40px] text-[20px] 
+                                                [-webkit-text-stroke:1px_white] font-extrabold text-zinc-900/60 px-2 py-1 w-fit h-fit">
                                             #{index + 1}
                                         </span>
                                     </div>

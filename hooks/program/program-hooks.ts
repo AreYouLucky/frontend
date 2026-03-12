@@ -11,7 +11,7 @@ export const getProgramInfo = async (slug: string) => {
           "X-API-TOKEN": process.env.NEXT_PUBLIC_FRONTEND_API_TOKEN ?? "",
           "content-type": "application/json",
         },
-        cache: "no-store"
+        next: { revalidate: 1800 },
       }
     );
 
@@ -40,7 +40,7 @@ export function useGetProgramSeasonsPosts(code: string) {
             "X-API-TOKEN": process.env.NEXT_PUBLIC_FRONTEND_API_TOKEN!,
             "content-type": "application/json",
           },
-          cache: "no-store",
+          next: { revalidate: 1800 },
         }
       );
       if (!res.ok) {
@@ -69,12 +69,13 @@ export function useGetProgramPosts(code: string) {
             "X-API-TOKEN": process.env.NEXT_PUBLIC_FRONTEND_API_TOKEN!,
             "content-type": "application/json",
           },
-          cache: "no-store",
+          next: { revalidate: 1800 },
         }
       );
 
       if (!res.ok) {
-        throw new Error(`Get posts failed: ${res.status}`);
+        console.error("Get post failed:", res.status);
+        return {} as ProgramPosts;
       }
 
       return res.json();

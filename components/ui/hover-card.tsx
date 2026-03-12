@@ -17,7 +17,7 @@ type Props = {
   program_code?: string
 }
 
-export default function HoverCard({ title, description, image, banner = "", video, slug, categories, date, program_code }: Props) {
+export default function HoverCard({ title="", description="", image="", banner = "", video="", slug="", categories, date, program_code }: Props) {
   const [open, setOpen] = useState(false)
   const timer = useRef<NodeJS.Timeout | null>(null)
 

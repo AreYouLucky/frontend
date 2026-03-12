@@ -1,31 +1,32 @@
-import React from 'react'
-import { FaSpinner } from 'react-icons/fa'
-export default function PartnerLoading() {
+import PageLoading from "@/components/ui/page-loading"
+import { FaSpinner } from "react-icons/fa";
+export default function ProgramLoading() {
   return (
-    <div className=" space-y-8  w-full lg:pt-20 md:pt-16 pt-14 lg:px-10 md:px-5 px-2 py-6">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-        {Array.from({ length: 12 }).map((_, i) => (
-          <div
-            key={i}
-            className="w-full space-y-3 animate-pulse grid-cols-3 grid border border-white/40 bg-white/5 p-4 rounded-lg"
-          >
-            <div className=" rounded-xl bg-white/10 flex justify-center items-center h-50" >
-              <FaSpinner className="text-white text-2xl animate-spin" />
-            </div>
-            <div className=' col-span-2 p-4'>
-              <div className='py-4 px-15  w-fit rounded-xl bg-white/20 mb-5'/>
-              <div className='py-1 rounded-xl bg-white/20 mb-1'/>
-              <div className='py-1 rounded-xl bg-white/20 mb-1'/>
-              <div className='py-1 rounded-xl bg-white/20 mb-1'/>
-              <div className='py-1 rounded-xl bg-white/20 mb-1'/>
-              <div className='py-1 rounded-xl bg-white/20 mb-1'/>
-              <div className='py-1 rounded-xl bg-white/20 mb-1'/>
-              <div className='py-1 rounded-xl bg-white/20 mb-1'/>
-              
-            </div>
+    <div className="w-full lg:pt-22 md:pt-18 pt-16">
+      <div className="flex md:h-90 lg:h-170 flex-row lg:px-20 md:px-5 px-3 gap-8">
+        <div className="grid w-full py-2 gap-px">
+          <div className="flex justify-center items-center w-full aspect-16/7 bg-white/10 animate-pulse lg:max-w-300 rounded-lg">
+            <FaSpinner className="text-white text-4xl animate-spin" />
           </div>
-        ))}
+          <div className="py-1 animate-pulse w-100 bg-white/20 h-10 rounded-lg" />
+          <div className="py-1 animate-pulse max-w-220 bg-white/20 h-2 rounded-lg" />
+          <div className="py-1 animate-pulse max-w-250 bg-white/20 h-2 rounded-lg" />
+          <div className="py-1 animate-pulse max-w-230 bg-white/20 h-2 rounded-lg" />
+
+        </div>
+        <div className=" md:w-120 w-60 flex flex-col gap-2  py-3">
+          <div className="py-1 animate-pulse w-40 bg-white/20 h-5 rounded-lg" />
+          <div className="w-full bg-white/10  aspect-819/1024 animate-pulse  flex items-center justify-center rounded-lg">
+            <FaSpinner className="text-white text-4xl animate-spin" />
+          </div>
+          <div className="py-1 animate-pulse w-30 bg-white/20 h-5 rounded-lg" />
+          <div className="py-1 animate-pulse max-w-230 bg-white/20 h-2 rounded-lg" />
+          <div className="py-1 animate-pulse max-w-230 bg-white/20 h-2 rounded-lg" />
+          <div className="py-1 animate-pulse max-w-230 bg-white/20 h-2 rounded-lg" />
+          <div className="py-1 animate-pulse max-w-230 bg-white/20 h-2 rounded-lg" />
+        </div>
       </div>
+      <PageLoading />
     </div>
   )
 }

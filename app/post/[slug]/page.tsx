@@ -90,7 +90,7 @@ export default async function PostPage({ params }: Props) {
   const relatedPosts: PostModel[] = posts.related
 
   return (
-    <div className="w-full  pt-16 md:pt-18 lg:pt-18 bg-linear-to-b from-black/80 to-transparent">
+    <div className="w-full  pt-16 md:pt-18 lg:pt-18 bg-linear-to-b from-black/80 to-transparent from-0% to-20%">
       <SetBg thumbnail={`/storage/images/post_images/thumbnails/${currentPost.thumbnail}`} />
       <div className="flex  flex-col gap-2 mb-8">
         <VideoInfo currentPost={currentPost} className="mb-4 w-full">
