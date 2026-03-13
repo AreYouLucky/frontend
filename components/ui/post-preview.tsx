@@ -71,7 +71,7 @@ function PostPreview({
                                 {categories?.map((category) => (
                                     <div
                                         key={category.post_category_id}
-                                        className="text-white text-[11px] py-px px-2 border border-white/60 rounded-lg shrink-0"
+                                        className="text-white text-[11px] py-1 px-3 font-semibold  rounded-lg shrink-0 bg-[#004a92]"
                                     >
                                         {category.category_name}
                                     </div>

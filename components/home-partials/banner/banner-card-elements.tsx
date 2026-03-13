@@ -11,7 +11,7 @@ export default function BannerCardElements({ banner }: { banner: BannerModel }) 
     return (
         <div className='w-full bg-linear-to-b from-transparent via-transparent to-zinc-900 via-90% to-100%'>
             <div className="grid h-78 md:h-120 lg:h-180 w-full grid-cols-1 lg:grid-cols-5 md:gap-4 lg:gap-8 gap-3 p-4  md:p-6 lg:p-12 bg-linear-to-l lg:from-black/10 md:from-black/40 from-black/60 to-black/90 ">
-                <div className="flex flex-col justify-center gap-2 md:gap-3 lg:col-span-2 lg:-mt-8 lg:pb-15 md:pb-10 fade-up">
+                <div className="flex flex-col justify-center gap-2 md:gap-4 lg:col-span-2 lg:-mt-8 lg:pb-15 md:pb-10 fade-up">
                     {banner?.highlight_text && [2, 6].includes(banner?.type) && (
                         <div className=" flex items-center gap-0.5 lg:gap-1 uppercase rounded px-1.5 md:px-2 lg:px-2.5 py-px md:py-0.5 bg-[#004a95] w-fit text-[7px] md:text-[9.5px] lg:text-[10px] font-semibold tracking-wide opacity-90">
                             <FaCircleInfo className="text-[10px] md:text-[11px]" />
