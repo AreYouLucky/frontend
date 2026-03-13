@@ -101,9 +101,6 @@ export default async function ProgramPage({ params }: Props) {
                 <ProgramSeasons code={program.code} className="px-4 md:px-0" />
             </div>
             <div className='flex flex-col rounded-md w-full lg:px-10 md:px-5 px-3 '>
-                <h2 className="lg:text-[17px] md:text-[13px] text-[11px] font-bold tracking-widest text-white uppercase lg:mb-4 md:mb-3 mb-3">
-                    Archive Episodes
-                </h2>
                 <ProgramPosts code={program.code} />
             </div>
         </div>

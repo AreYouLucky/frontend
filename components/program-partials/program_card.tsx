@@ -19,7 +19,7 @@
                 </h1>
                 <div className='flex items-center'>
                     <div className='border-r pr-4 border-white/40'>
-                        <h3 className='text-sm text-gray-50 flex items-center gap-2 font-semibold'><Calendar1Icon />{convertLongDate(program.date_started ?? "")}</h3>
+                        <h3 className='text-sm text-gray-50 flex items-center gap-2 font-semibold'><Calendar1Icon className='text-[#00aeef]'/>{convertLongDate(program.date_started ?? "")}</h3>
                     </div>
                     <div className='pl-4 text-white'>
                         <h3 className='text-sm text-gray-50 flex items-center gap-2 font-semibold '><VideoIcon />{total} Episodes</h3>

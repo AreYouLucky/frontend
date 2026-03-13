@@ -25,7 +25,7 @@ export default function PartnersCta({ totalPartners, spotlightLabel }: PartnersC
                     </p>
                 </div>
 
-                <div className="grid gap-3 rounded-[1.75rem] border border-white/10 bg-white/5 p-5 backdrop-blur md:min-w-[280px]">
+                <div className="grid gap-3 rounded-[1.75rem] border border-white/10 bg-white/5 p-5 backdrop-blur md:min-w-70">
                     <div>
                         <p className="text-[11px] uppercase tracking-[0.24em] text-zinc-500">
                             Why this matters

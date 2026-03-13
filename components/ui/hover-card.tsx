@@ -114,7 +114,7 @@ export default function HoverCard({ title="", description="", image="", banner =
                 {categories?.map((category) => (
                   <div
                     key={category.post_category_id}
-                    className="text-white text-[8px] py-px px-1 border border-white/60 rounded-lg shrink-0"
+                    className="text-white text-[8px] py-px px-1  rounded-lg shrink-0 bg-[#004a92]"
                   >
                     {category.category_name}
                   </div>

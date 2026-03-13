@@ -17,7 +17,7 @@ export default function FeaturedCard({ featured }: { featured: PostModel }) {
                 <>
 
                     <span className='w-fit flex items-center justify-center gap-2 text-white/90 rounded-full text-base md:text-lg lg:text-xl py-1 font-bold'>
-                        <RiVideoOnAiFill /> Featured Episode
+                        <RiVideoOnAiFill className='text-[#00aeef]'/> Featured Episode
                     </span>
                     <div
                         className='rounded-lg border border-white/30 cursor-pointer'
