@@ -34,7 +34,7 @@ export default function ProgramSection() {
                                     <h1 className=" lg:text-[20px] md:text-[15px] text-[13px] font-bold  tracking-wider px-5 border-l border-white/40 text-white relative uppercase ">
                                         {program.title}
                                     </h1>
-                                    <Link href={`/program/${program.code}`} className='font-semibold  h-fit rounded-lg px-4 py-1.5 text-[15px] border border-white/40 text-white'>
+                                    <Link href={`/program/${program.code}`} className='font-semibold  h-fit rounded-lg px-4 md:py-1.5 py-1 text-[12px] md:text-[15px] border border-white/40 text-white'>
                                         View All
                                     </Link>
                                 </div>

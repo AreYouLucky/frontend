@@ -23,7 +23,7 @@ function YoutubeList() {
                     </h3>
                 </div>
 
-                <span className="px-3 py-1 rounded-xl border text-[13px] font-bold tracking-wide text-slate-50 uppercase ">
+                <span className="px-3 py-1 rounded-lg border text-[13px] font-bold tracking-wide text-slate-50 uppercase ">
                     2026
                 </span>
             </div>

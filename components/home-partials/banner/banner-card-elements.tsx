@@ -10,8 +10,8 @@ import Link from 'next/link';
 export default function BannerCardElements({ banner }: { banner: BannerModel }) {
     return (
         <div className='w-full bg-linear-to-b from-transparent via-transparent to-zinc-900 via-90% to-100%'>
-            <div className="grid h-78 md:h-120 lg:h-180 w-full grid-cols-1 lg:grid-cols-5 md:gap-4 lg:gap-8 gap-3 p-6  md:p-6 lg:p-12 bg-linear-to-l from-black/10 to-black/90 ">
-                <div className="flex flex-col justify-center gap-1 md:gap-3 lg:col-span-2 lg:-mt-8 lg:pb-15 md:pb-10 fade-up">
+            <div className="grid h-78 md:h-120 lg:h-180 w-full grid-cols-1 lg:grid-cols-5 md:gap-4 lg:gap-8 gap-3 p-4  md:p-6 lg:p-12 bg-linear-to-l lg:from-black/10 md:from-black/40 from-black/60 to-black/90 ">
+                <div className="flex flex-col justify-center gap-2 md:gap-3 lg:col-span-2 lg:-mt-8 lg:pb-15 md:pb-10 fade-up">
                     {banner?.highlight_text && [2, 6].includes(banner?.type) && (
                         <div className=" flex items-center gap-0.5 lg:gap-1 uppercase rounded px-1.5 md:px-2 lg:px-2.5 py-px md:py-0.5 bg-[#004a95] w-fit text-[7px] md:text-[9.5px] lg:text-[10px] font-semibold tracking-wide opacity-90">
                             <FaCircleInfo className="text-[10px] md:text-[11px]" />
@@ -35,7 +35,7 @@ export default function BannerCardElements({ banner }: { banner: BannerModel }) 
 
                     {banner?.type && [3, 4].includes(banner?.type) && (
                         <>
-                            <div className="flex flex-wrap lg:gap-2 gap-1 text-[7.5px] md:text-[10.5px] lg:text-[12px] font-bold tracking-wide">
+                            <div className="flex flex-wrap lg:gap-2 gap-1 text-[10px] md:text-[10.5px] lg:text-[12px] font-bold tracking-wide">
                                 {banner?.highlight_text && (
                                     <div className="flex items-center gap-0.5 lg:gap-1 uppercase rounded-md bg-[#004a95] px-1.5 md:px-2 lg:px-2.5 py-px md:py-0.5  w-fit text-[7px] md:text-[9.5px] lg:text-[10px] font-semibold tracking-wide opacity-90">
                                         <FaCircleInfo /> {banner.highlight_text}
@@ -49,11 +49,11 @@ export default function BannerCardElements({ banner }: { banner: BannerModel }) 
                     }
 
 
-                    <p className="text-[9.5px] md:text-[12px] lg:text-[14.3px] leading-snug lg:leading-relaxed max-w-xl font-regular tracking-normal text-justify lg:line-clamp-6 md:line-clamp-6 line-clamp-5 text-white/90">
+                    <p className="text-[10.5px] md:text-[12px] lg:text-[14.3px] leading-relaxed max-w-xl font-regular tracking-normal text-justify lg:line-clamp-6 md:line-clamp-6 line-clamp-5 text-white/90">
                         {banner?.description}
                     </p>
 
-                    <Link href={[3, 4].includes(banner.type) ? `/program/${banner.code}` : banner.url ?? "#"} className="mt-2 w-fit flex items-center gap-2 cursor-pointer lg:px-4 px-3 lg:py-2 md:py-1.5 py-1 rounded  border bg-white/10 hover:scale-105 transition text-[10px] font-semibold md:text-sm text-[#ffffff]">
+                    <Link href={[3, 4].includes(banner.type) ? `/program/${banner.code}` : banner.url ?? "#"} className="mt-2 w-fit flex items-center gap-2 cursor-pointer lg:px-4 px-3 lg:py-2 md:py-1.5 py-1 rounded  border bg-white/10 hover:scale-105 transition text-[12px] font-semibold md:text-sm text-[#ffffff]">
                         {banner?.type && [3, 4].includes(banner?.type) ? (
                             <>
                                 <BsCollectionPlayFill /> View Episodes
@@ -65,7 +65,7 @@ export default function BannerCardElements({ banner }: { banner: BannerModel }) 
                         )}
                     </Link>
                 </div>
-                <div className="hidden md:flex items-center justify-end lg:col-span-3  lg:pb-15 md:pb-10 fade-left">
+                <div className="hidden lg:flex items-center justify-end lg:col-span-3  lg:pb-15 md:pb-10 fade-left">
                     {banner?.type && [2, 3].includes(banner?.type) && (
                         <Image
                             src={`/storage/images/banners/${banner?.media}`}

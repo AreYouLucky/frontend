@@ -33,7 +33,7 @@ export default function VideoInfo({ currentPost, className, children }: { curren
                                     }}
                                 />
                             </div>
-                                <p className='text-sm poppins-semibold mt-7 mb-2 flex gap-1 flex-wrap'>{popTags(currentPost?.tags as string)}</p>
+                            <p className='text-sm poppins-semibold mt-7 mb-2 flex gap-1 flex-wrap px-4'>{popTags(currentPost?.tags as string)}</p>
                         </div>
 
                     </div>
