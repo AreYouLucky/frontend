@@ -66,25 +66,25 @@ export default async function RootLayout({ children }: { children: React.ReactNo
     return (
         <html lang="en" className={`${montserrat.variable} ${poppins.variable}`}>
             <body className="h-screen max-w-7xl overflow-hidden font-montserrat">
-                <Ads ads={mounts.advertisements} />
-                <BackgroundProvider>
-                    <div className="fixed inset-0 -z-20" style={{ background: "var(--app-bg)" }}>
-                        <div className="absolute inset-0" style={{ background: "var(--app-radial)" }} />
-                    </div>
-                    <div
-                        className="relative z-10 h-screen w-screen backdrop-blur-sm border"
-                        style={{
-                            background: "var(--shell-bg)",
-                            borderColor: "var(--shell-border)",
-                        }}
-                    >
-                        <AppShell mounts={mounts}>
-                            <QueryProvider>
+                <QueryProvider>
+                    <Ads ads={mounts.advertisements} />
+                    <BackgroundProvider>
+                        <div className="fixed inset-0 -z-20" style={{ background: "var(--app-bg)" }}>
+                            <div className="absolute inset-0" style={{ background: "var(--app-radial)" }} />
+                        </div>
+                        <div
+                            className="relative z-10 h-screen w-screen backdrop-blur-sm border"
+                            style={{
+                                background: "var(--shell-bg)",
+                                borderColor: "var(--shell-border)",
+                            }}
+                        >
+                            <AppShell mounts={mounts}>
                                 {children}
-                            </QueryProvider>
-                        </AppShell>
-                    </div>
-                </BackgroundProvider>
+                            </AppShell>
+                        </div>
+                    </BackgroundProvider>
+                </QueryProvider>
             </body>
         </html>
     )

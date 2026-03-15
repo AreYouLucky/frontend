@@ -1,8 +1,16 @@
 
 const baseURL = process.env.NEXT_PUBLIC_BACKEND_API_URL;
 import { useQuery } from "@tanstack/react-query";
-import { ProgramsModel } from "@/types/models";
+import { PostModel,ProgramsModel } from "@/types/models";
 import { TopCount } from "@/types/models";
+import { useInfiniteQuery } from "@tanstack/react-query";
+
+type SearchPostsResponse = {
+  current_page: number;
+  last_page: number;
+  data: PostModel[];
+  total: number;
+};
 
 export const loadHomePageMounts = async () => {
   try {
@@ -108,4 +116,49 @@ export function useGetYtList() {
 }
 
 
+export function useGetSearchedPosts(searchText: string) {
+  const normalizedSearchText = searchText.trim();
+
+  return useInfiniteQuery<SearchPostsResponse>({
+    queryKey: ["searched-posts", normalizedSearchText],
+
+    queryFn: async ({ pageParam = 1 }): Promise<SearchPostsResponse> => {
+      const res = await fetch(
+        `${baseURL}/api/search?search=${encodeURIComponent(
+          normalizedSearchText
+        )}&page=${pageParam}`,
+        {
+          headers: {
+            Accept: "application/json",
+            "X-API-TOKEN": process.env.NEXT_PUBLIC_FRONTEND_API_TOKEN!,
+            "Content-Type": "application/json",
+          },
+        }
+      );
+
+      if (!res.ok) {
+        console.error("Search posts failed:", res.status);
+        return {
+          current_page: Number(pageParam),
+          last_page: Number(pageParam),
+          data: [],
+          total: 0,
+        };
+      }
+
+      return res.json();
+    },
+
+    initialPageParam: 1,
+
+    getNextPageParam: (lastPage) => {
+      if (lastPage.current_page < lastPage.last_page) {
+        return lastPage.current_page + 1;
+      }
+      return undefined;
+    },
+
+    enabled: normalizedSearchText.length > 0,
+  });
+}
 

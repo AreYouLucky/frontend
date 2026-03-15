@@ -3,6 +3,7 @@ import BackgroundImg from "./background-image";
 import { convertLongDate } from "@/lib/utils"
 import { FaPlay, FaPlus } from "react-icons/fa";
 import { CategoriesModel } from "@/types/models";
+import ImageLoader from "./image-loader";
 
 type PostPreviewProps = {
     title: string;
@@ -71,7 +72,7 @@ function PostPreview({
                                 {categories?.map((category) => (
                                     <div
                                         key={category.post_category_id}
-                                        className="text-white text-[11px] py-1 px-3 font-semibold  rounded-lg shrink-0 bg-[#004a92]"
+                                        className="text-white text-[11px] py-1 px-3 font-semibold  rounded-lg shrink-0 bg-[#004a92]/50 border border-white/40"
                                     >
                                         {category.category_name}
                                     </div>
@@ -123,7 +124,7 @@ function PostPreview({
 
                     <div className="order-1 md:order-2 p-4 md:p-8 h-full flex items-center">
 
-                        <div className="w-full rounded-xl overflow-hidden aspect-video shadow-2xl ring-1 ring-white/10 border border-white/20">
+                        <div className="w-full rounded-xl overflow-hidden shadow-2xl ring-1 ring-white/10 border border-white/20">
 
                             {trailer ? (
                                 <video
@@ -134,13 +135,19 @@ function PostPreview({
                                     className="w-full object-cover"
                                 />
                             ) : banner ? (
-                                <BackgroundImg imageSrc={`/storage/images/post_images/banners/${banner}`}>
-                                    <div className="w-full h-full" />
-                                </BackgroundImg>
+                                <ImageLoader
+                                    src={`/storage/images/post_images/banners/${banner}`}
+                                    className="w-full h-full object-contain"
+                                    height={500}
+                                    width={600}
+                                />
                             ) : (
-                                <BackgroundImg imageSrc={`/storage/images/post_images/thumbnails/${thumbnail}`}>
-                                    <div className="w-full h-full bg-radial-gradient from-black to-transparent" />
-                                </BackgroundImg>
+                                <ImageLoader
+                                    src={`/storage/images/post_images/thumbnails/${thumbnail}`}
+                                    className="w-full h-full object-contain"
+                                    height={500}
+                                    width={600}
+                                />
                             )}
 
                         </div>

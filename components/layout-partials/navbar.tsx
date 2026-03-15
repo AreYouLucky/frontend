@@ -1,13 +1,12 @@
 "use client"
 import Image from "next/image";
 import { Menu, ChevronDown } from "lucide-react";
-import { FaSearch } from "react-icons/fa";
 import Socials from "./socials";
 import { useEffect, useState } from "react";
 import PrefetchLink from "./prefetch-link";
 import { ProgramsModel } from "@/types/models";
 import Link from "next/link";
-
+import SearchBar from "./search-bar";
 export default function Navbar({
     onMenuClick,
     programs
@@ -114,21 +113,7 @@ export default function Navbar({
 
                 {/* Right */}
                 <div className="flex items-center md:gap-3 gap-1 justify-end lg:w-full">
-                    <div
-                        className="flex items-center rounded-full border  border-white/50 md:px-5 px-3 md:py-2 py-1.5 transition text-white focus-within:bg-white focus-within:text-black"
-                    >
-                        <input
-                            type="text"
-                            placeholder="Search..."
-                            className="bg-transparent text-sm outline-none md:w-50 lg:w-60 w-30 placeholder:text-gray-100 "
-                        />
-                        <FaSearch
-                            className="ml-2"
-                        />
-                    </div>
-
-
-
+                    <SearchBar />
                     <Socials className="hidden lg:flex" />
                     <button
                         onClick={onMenuClick}

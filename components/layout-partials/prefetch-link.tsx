@@ -31,7 +31,7 @@ export default function PrefetchLink({
       onMouseLeave={() => {
         onHoverEnd?.()
       }}
-      className={className}
+      className={ className}
     >
       {children}
     </Link>

@@ -7,7 +7,7 @@ export default function VideoInfo({ currentPost, className, children }: { curren
     function popTags(text: string) {
         if (!text) return
         const array = text.split(",");
-        return <>{array.map((item, index) => <span key={index} className='text-[13px] px-3 py-1 ml-px border border-white/20  bg-[#004a95]  tracking-wide rounded-full'>{item}</span>)}</>
+        return <>{array.map((item, index) => <span key={index} className='text-[13px] px-3 py-1 ml-px bg-[#004a92]/50 border border-white/40  tracking-wide rounded-full'>{item}</span>)}</>
     }
     return (
         <div className={`w-full border-b border-white/40 ${className}`}>

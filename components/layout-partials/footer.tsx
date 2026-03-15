@@ -1,10 +1,11 @@
 import { CategoriesModel } from '@/types/models'
 import Link from 'next/link'
 import { MdEmail, MdPhone } from 'react-icons/md'
+import Image from 'next/image'
 
 function Footer({ categories }: { categories: CategoriesModel[] }) {
     return (
-        <footer className='bg-black text-white/80 font-poppins bottom-0 relative py-5 lg:px-18 md:px-10 px-5  lg:text-sm md:text-[12px] text-[10px] scroll-mt-20 ' id='footer'>
+        <footer className='border-t border-gray-400/40 bg-black text-white/80 font-poppins bottom-0 relative py-5 lg:px-18 md:px-10 px-5  lg:text-sm md:text-[12px] text-[10px] scroll-mt-20 ' id='footer'>
             <div className='grid lg:grid-cols-2 grid-cols-3  py-5 gap-4 border-b border-gray-400/40'>
                 <div className=' grid lg:grid-cols-2 lg:gap-2 gap-1 border-r border-gray-400/40'>
                     <h2 className='text-xl font-bold lg:col-span-2 mb-2 text-white'>Categories</h2>
@@ -14,7 +15,14 @@ function Footer({ categories }: { categories: CategoriesModel[] }) {
                 </div>
                 <div className=' grid lg:grid-cols-2 grid-cols-1 gap-2 md:gap-4 p-3 lg:col-span-1 col-span-2'>
                     <div className='flex flex-col lg:gap-5 gap-3 justify-center order-2 lg:order-1'>
-                        <div className='text-lg font-bold uppercase leading-tight'>
+                        <div className='text-lg font-bold uppercase leading-tight flex items-center gap-2'>
+                            <Image
+                                src="/storage/images/logos/dost_stii.png"
+                                alt="DOSTV Logo"
+                                width={120} height={100}
+                                className="h-auto w-20 md:w-28"
+                                priority
+                            />
                             DOST- Science and Technology Information Institute (STII)
                         </div>
 

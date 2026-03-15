@@ -7,16 +7,16 @@ function Socials({className}:{className?:string}) {
     return (
         <div className={`flex gap-4 ${className}`}>
             <Link href="https://www.facebook.com/DOSTvPH/" target="_blank" rel="noopener noreferrer" className=" bg-black flex items-center justify-center rounded-full  text-white hover:scale-105 duration-300">
-                <FaFacebook className="h-5 w-5" />
+                <FaFacebook className="h-6 w-6" />
             </Link>
             <Link href="https://twitter.com/DOSTvPH/" target="_blank" rel="noopener noreferrer" className=" bg-black flex items-center justify-center rounded-md  text-white hover:scale-105 duration-300">
-                <FaSquareXTwitter className="h-5 w-5" />
+                <FaSquareXTwitter className="h-6 w-6" />
             </Link>
             <Link href="https://www.instagram.com/dostvph/" target="_blank" rel="noopener noreferrer" className=" bg-black flex items-center justify-center rounded-md  text-white hover:scale-105 duration-300">
-                <FaInstagram className="h-5 w-5" />
+                <FaInstagram className="h-6 w-6" />
             </Link>
             <Link href="https://www.instagram.com/dostvph/" target="_blank" rel="noopener noreferrer" className=" h-fit px-0.5 bg-black flex items-center justify-center rounded-md  text-white hover:scale-105 duration-300">
-                <FaYoutube className="h-5 w-5" />
+                <FaYoutube className="h-6 w-6" />
             </Link>
 
         </div>

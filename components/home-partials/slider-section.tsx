@@ -13,8 +13,6 @@ export default function SliderSection({ posts, program= "", program_code = ""}: 
 
     const [activePost, setActivePost] = useState<PostModel | null>(null)
 
-    console.log("posts", activePost)
-
     return (
         <div className="relative w-full min-w-0">
             <HorizontalSlider>
