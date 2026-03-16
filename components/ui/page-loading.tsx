@@ -20,7 +20,7 @@ export default function PageLoading() {
                     ))}
                 </div>
                 <div className="lg:px-3 md:px-1 px-1">
-                    <div className="border-b border-white/40"></div>
+                    <div className=""></div>
                 </div>
             </div>
         </>

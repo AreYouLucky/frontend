@@ -231,3 +231,9 @@ export type Partner = {
   description: string | null;
   featured_image: string | null;
 }
+
+
+export type SelectOption = {
+  id: string;
+  label: string;
+};

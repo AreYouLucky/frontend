@@ -1,4 +1,66 @@
 import LinkPlayer from "@/components/ui/link-player";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+    metadataBase: new URL("https://dostv.ph"),
+    title: "About DOSTv | Science for the People",
+    description:
+        "Learn about DOSTv, the science communication platform of the Department of Science and Technology (DOST-STII). Discover its mission, milestones, awards, and impact in bringing science closer to every Filipino.",
+    keywords: [
+        "About DOSTv",
+        "DOSTv history",
+        "DOST Science and Technology Information Institute",
+        "science communication Philippines",
+        "DOST programs Philippines",
+        "Filipino science media",
+        "science for the people",
+        "DOSTv milestones",
+        "science awareness Philippines",
+        "DOSTv awards",
+    ],
+
+    robots: {
+        index: true,
+        follow: true,
+        googleBot: {
+            index: true,
+            follow: true,
+            "max-video-preview": -1,
+            "max-image-preview": "large",
+            "max-snippet": -1,
+        },
+    },
+
+    openGraph: {
+        title: "About DOSTv",
+        description:
+            "Discover the story of DOSTv — the Department of Science and Technology's platform for bringing science, technology, and innovation stories to Filipinos nationwide.",
+        url: "https://dostv.ph/about",
+        siteName: "DOSTv",
+        images: [
+            {
+                url: "/storage/images/logos/dostv.png",
+                width: 1200,
+                height: 630,
+                alt: "About DOSTv - Science for the People",
+            },
+        ],
+        locale: "en_PH",
+        type: "website",
+    },
+
+    twitter: {
+        card: "summary_large_image",
+        title: "About DOSTv",
+        description:
+            "Discover the mission, milestones, and impact of DOSTv in bringing science and technology closer to Filipinos.",
+        images: ["/storage/images/logos/dostv.png"],
+    },
+
+    icons: {
+        icon: "/storage/images/logos/logo.png",
+    },
+};
 
 type TimelineItem = {
   year: string;

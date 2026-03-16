@@ -76,7 +76,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       images: [image],
     },
     icons: {
-      icon: "/storage/images/logos/logo.png",
+      icon: '/storage/images/logos/logo.png',
     },
   };
 }

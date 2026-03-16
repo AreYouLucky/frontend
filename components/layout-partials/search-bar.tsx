@@ -49,7 +49,6 @@ export default function SearchBar() {
     data?.pages
       .flatMap((page) => page.data)
       .filter((post) => post.post_id && post.slug && post.title) ?? [];
-  const totalResults = data?.pages[0]?.total ?? 0;
   const showResults = isOpen && search.length > 0;
 
   const handleResultsScroll = (event: React.UIEvent<HTMLDivElement>) => {
@@ -82,9 +81,9 @@ export default function SearchBar() {
           placeholder="Explore science stories…"
           className="w-full placeholder:lg:text-[10.5px] placeholder:md:text-[10px] placeholder:text-[8px] bg-transparent lg:text-[12px] text-[11px]  font-semibold tracking-wider uppercase text-white focus-within:text-white  focus-within:placeholder:text-gray-400 outline-none placeholder:text-white/80"
         />
-        <div className="pl-2 border-l border-white/80  ">
-          <LuFolderSearch2 className=" text-xl " />
-        </div>
+        <Link href={"/advance-search"} className="pl-2 border-l border-white/80 ">
+          <LuFolderSearch2 className=" text-xl hover:scale-110 duration-300" />
+        </Link>
       </div>
 
       {showResults && (

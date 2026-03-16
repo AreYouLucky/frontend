@@ -24,23 +24,17 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         };
     }
 
-    const image = `/storage/images/program_images/thumbnails${program.image}`;
+    const image = `/storage/images/program_images/thumbnails/${program.image}`;
 
     return {
         metadataBase: new URL("https://dostv.ph"),
         title: program.title,
         description: stripHtml(program.description),
         keywords: [
-            "DOSTv",
             "DOSTv Program",
-            "DOST Philippines",
-            "science Philippines",
-            "technology Philippines",
-            "innovation",
-            "science for the people",
-            "DOST programs",
             "Filipino science shows",
             stripHtml(program.description),
+            program.title,
         ],
         robots: {
             index: true,

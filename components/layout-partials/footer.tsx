@@ -10,7 +10,7 @@ function Footer({ categories }: { categories: CategoriesModel[] }) {
                 <div className=' grid lg:grid-cols-2 lg:gap-2 gap-1 border-r border-gray-400/40'>
                     <h2 className='text-xl font-bold lg:col-span-2 mb-2 text-white'>Categories</h2>
                     {categories.map((category) => (
-                        <Link href={`/category/${category.slug}`} key={category.category_id} className='pl-2 hover:scale-105 duration-300 h-fit hover:text-white hover:font-semibold'>{category.title}</Link>
+                        <Link href={`/advance-search?category=${category.category_id}`} key={category.category_id} className='pl-2 hover:scale-105 duration-300 h-fit hover:text-white hover:font-semibold'>{category.title}</Link>
                     ))}
                 </div>
                 <div className=' grid lg:grid-cols-2 grid-cols-1 gap-2 md:gap-4 p-3 lg:col-span-1 col-span-2'>

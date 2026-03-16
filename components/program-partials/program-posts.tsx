@@ -6,7 +6,7 @@ import { MorphingCard } from "../ui/morphing-card";
 import HoverCard from "../ui/hover-card";
 import { convertLongDate, convertShortDate } from "@/lib/utils";
 import { useGetProgramPosts } from "@/hooks/program/program-hooks";
-import CardLoading from "../ui/card-loading";
+import { FaSpinner } from "react-icons/fa";
 export default function ProgramPosts({ code }: { code: string }) {
   const [expandedId, setExpandedId] = useState<number | null>(null);
 
@@ -89,7 +89,11 @@ export default function ProgramPosts({ code }: { code: string }) {
         </div>
       </LayoutGroup>
 
-      {isFetchingNextPage && <CardLoading />}
+      {isFetchingNextPage &&
+        (<div className="px-4 py-4 text-lg text-white/55 flex gap-3 items-center mt-5">
+          <FaSpinner className="animate-spin text-white/70" />
+          Loading more...
+        </div>)}
 
       <div ref={observerRef} className="h-10 w-full mt-20" />
     </div>

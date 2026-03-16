@@ -1,5 +1,6 @@
 "use client"
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import { Menu, ChevronDown } from "lucide-react";
 import Socials from "./socials";
 import { useEffect, useState } from "react";
@@ -19,7 +20,8 @@ export default function Navbar({
     const [opacity, setOpacity] = useState(0);
     const [dropdownOpen, setDropdownOpen] = useState(false);
     const [clicked, setClicked] = useState(false);
-
+    const pathname = usePathname();
+    const hideSearchBar = pathname.startsWith("/advance-search");
     const openDropdown = () => {
         if (!clicked) setDropdownOpen(true);
     };
@@ -113,7 +115,7 @@ export default function Navbar({
 
                 {/* Right */}
                 <div className="flex items-center md:gap-3 gap-1 justify-end lg:w-full">
-                    <SearchBar />
+                    {!hideSearchBar && <SearchBar />}
                     <Socials className="hidden lg:flex" />
                     <button
                         onClick={onMenuClick}

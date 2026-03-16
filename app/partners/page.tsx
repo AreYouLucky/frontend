@@ -1,6 +1,66 @@
-import React from 'react'
 import { getPartners } from '@/hooks/partner/partner-hooks'
 import PartnersList from '@/components/partners-partials/partners-list';
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+    metadataBase: new URL("https://dostv.ph"),
+    title: "DOSTv Partners | Collaborating for Science Communication",
+    description:
+        "Discover the organizations, institutions, and agencies partnering with DOSTv to bring science, technology, and innovation stories closer to Filipinos nationwide.",
+    keywords: [
+        "DOSTv partners",
+        "DOST Philippines partners",
+        "science collaboration Philippines",
+        "science communication partners",
+        "DOST science programs partners",
+        "Philippine science organizations",
+        "DOSTv collaborators",
+        "science and technology partnerships Philippines",
+    ],
+
+    robots: {
+        index: true,
+        follow: true,
+        googleBot: {
+            index: true,
+            follow: true,
+            "max-video-preview": -1,
+            "max-image-preview": "large",
+            "max-snippet": -1,
+        },
+    },
+
+    openGraph: {
+        title: "DOSTv Partners",
+        description:
+            "Explore the institutions and organizations collaborating with DOSTv to expand science communication and innovation awareness across the Philippines.",
+        url: "https://dostv.ph/partners",
+        siteName: "DOSTv",
+        images: [
+            {
+                url: "/storage/images/logos/dostv.png",
+                width: 1200,
+                height: 630,
+                alt: "DOSTv Partners",
+            },
+        ],
+        locale: "en_PH",
+        type: "website",
+    },
+
+    twitter: {
+        card: "summary_large_image",
+        title: "DOSTv Partners",
+        description:
+            "Meet the organizations working with DOSTv to promote science, technology, and innovation in the Philippines.",
+        images: ["/storage/images/logos/dostv.png"],
+    },
+
+    icons: {
+        icon: "/storage/images/logos/logo.png",
+    },
+};
+
 export default async function PartnersPage() {
     const partners = (await getPartners()) ?? [];
 
