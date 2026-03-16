@@ -7,7 +7,7 @@ export default function HeaderSection() {
 
             <section className="flex justify-center items-center flex-col h-full text-white  w-full">
 
-                <div className="flex items-center gap-2 text-[11px] lg:text-[13px] font-semibold uppercase tracking-[0.2em] text-sky-300 fade-down">
+                <div className="flex items-center gap-2 text-[11px] lg:text-[13px] font-semibold uppercase tracking-[0.2em]  fade-down">
                     <Sparkles className="h-4 w-4" />
                     Explore science on DOSTv
                 </div>

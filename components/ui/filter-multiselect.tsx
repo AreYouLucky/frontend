@@ -55,7 +55,7 @@ export default function FilterMultiSelect({
       </button>
 
       {isOpen && (
-        <div className="absolute left-0 right-0 top-[calc(100%+0.8rem)] z-30 overflow-hidden backdrop-blur-xl rounded-2xl border border-white/40 p-2 shadow-lg shadow-white/40 py-4 scale-105">
+        <div className="absolute left-0 right-0 top-[calc(100%+0.8rem)] z-30 overflow-hidden backdrop-blur-xl bg-zinc-900 rounded-2xl border border-white/40 p-2 shadow-lg shadow-white/40 py-4 scale-105">
           <div className="scroll-slim max-h-64 space-y-1 overflow-y-auto pr-2 pl-1">
             {options.length > 0 ? (
               options.map((option) => {
@@ -75,7 +75,7 @@ export default function FilterMultiSelect({
                     className={`flex w-full items-center justify-between rounded-xl px-3 py-2 text-sm transition ${
                       isSelected
                         ? "bg-white/70 text-zinc-900 backdrop-blur-md"
-                        : "border border-white/10 text-white/80 hover:bg-white/10"
+                        : " text-white/80 hover:bg-white/10"
                     }`}
                   >
                     <span className="truncate">{option.label}</span>

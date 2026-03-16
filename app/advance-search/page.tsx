@@ -45,10 +45,10 @@ export default function AdvanceSearch() {
             <section className='w-full lg:pb-15 pb-8'>
                 <HeaderSection />
             </section>
-            <section className='border-b border-white/20 pb-10 fade-right'>
+            <section className='border-b border-white/20 pb-10 fade-right z-50 relative'>
                 <SearchSection item={item} handleChange={handleChange} handleArrayChange={handleArrayChange} setItem={setItem} hasActiveFilters={hasActiveFilters} />
             </section>
-            <section className='fade-up'>
+            <section className=' relative'>
                 <ResultSection
                     data={data}
                     fetchNextPage={fetchNextPage}
