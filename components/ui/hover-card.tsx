@@ -122,7 +122,7 @@ export default function HoverCard({ title="", description="", image="", banner =
               </div>
 
               {/* Controls */}
-              <div className="mt-4 flex gap-2">
+              <div className="mt-2 flex gap-2">
                 <div className="pt-2">
                   <Link
                     href={`/post/${slug}`}
