@@ -126,7 +126,7 @@ export default function HoverCard({ title="", description="", image="", banner =
                 <div className="pt-2">
                   <Link
                     href={`/post/${slug}`}
-                    className=" bg-white text-gray-900 hover:bg-gray-200 transition rounded-md px-5 py-2 flex items-center gap-2 w-fit font-bold text-xs shadow-lg hover:scale-105 duration-300 ">
+                    className=" bg-white text-gray-900 hover:bg-gray-200 transition rounded-md px-3 py-2 flex items-center gap-2 w-fit font-bold text-xs shadow-lg hover:scale-105 duration-300 ">
                     <FaPlay className="text-xs" />
                     Play
                   </Link>
@@ -136,7 +136,7 @@ export default function HoverCard({ title="", description="", image="", banner =
                     <div className="pt-2">
                       <Link
                         href={`/program/${program_code}`}
-                        className="  border text-gray-50 hover:bg-gray-800 transition rounded-md px-5 py-2 flex items-center gap-2 w-fit font-bold text-xs shadow-lg hover:scale-105 duration-300 ">
+                        className="  border text-gray-50 hover:bg-gray-800 transition rounded-md px-3 py-2 flex items-center gap-2 w-fit font-bold text-xs shadow-lg hover:scale-105 duration-300 ">
                         <FaPlus className="text-xs" />
                         More
                       </Link>
