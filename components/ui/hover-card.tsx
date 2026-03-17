@@ -107,7 +107,7 @@ export default function HoverCard({ title="", description="", image="", banner =
 
             <div className="px-4 pt-2 pb-4">
               <h3 className="text-[16px] font-semibold text-white relative line-clamp-2">{title}</h3>
-              <p className="mt-2 text-[10px] text-justify text-gray-200 line-clamp-3">
+              <p className="mt-2 text-[9px] text-justify text-gray-200 line-clamp-2">
                 {description}
               </p>
               <div className="flex gap-1 mt-2 flex-wrap">
