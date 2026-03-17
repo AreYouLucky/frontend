@@ -63,13 +63,20 @@ export default function Navbar({
         >
             <div className="flex h-full items-center justify-between md:px-6 px-2">
                 <div className="flex ">
-                    <div className="h-auto w-20 md:w-28">
-                        <Link href="/">
+                    <div className="h-auto w-20 md:w-36">
+                        <Link href="/" className="flex items-center md:gap-3 gap-2">
+                            <Image
+                                src="/storage/images/logos/DOST.png"
+                                alt="DOSTV Logo"
+                                width={120} height={100}
+                                className="h-auto w-5 md:w-7"
+                                priority
+                            />
                             <Image
                                 src="/storage/images/logos/dostv.png"
                                 alt="DOSTV Logo"
                                 width={120} height={100}
-                                className="h-auto w-20 md:w-28"
+                                className="h-auto w-20 md:w-25"
                                 priority
                             />
                         </Link>

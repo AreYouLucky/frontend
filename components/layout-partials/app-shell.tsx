@@ -43,10 +43,12 @@ export default function AppShell({ mounts, children, }: { children: React.ReactN
           onMenuClick={() => setSidebarOpen(!sidebarOpen)}
         />
         <div className="flex-1 overflow-y-auto scroll-slim relative" id="app-scroll">
-          <main className="w-full min-h-screen overflow-x-hidden">
+          <main className="w-full min-h-screen overflow-x-hidden z-10 relative">
             {children}
           </main>
-          <Footer categories={mounts.categories} />
+          <footer className="relative z-0">
+            <Footer categories={mounts.categories} />
+          </footer>
         </div>
       </div>
     </div>
