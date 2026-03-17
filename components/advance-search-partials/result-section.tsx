@@ -9,8 +9,8 @@ import FilterEmpty from "./result-partials/filter-empty";
 import EmptyResult from "./result-partials/empty-result";
 import CardLoading from "../ui/card-loading";
 import { LayoutGroup } from "framer-motion";
-import { MorphingCard } from "../ui/morphing-card";
-import { convertShortDate } from "@/lib/utils";
+import Modal from "../ui/modal";
+import PostPreview from "../ui/post-preview";
 
 type SearchPostsResponse = {
     current_page: number;
@@ -38,7 +38,7 @@ export default function ResultSection({
     status,
 }: ResultSectionProps) {
     const observerRef = useRef<HTMLDivElement | null>(null);
-    const [expandedId, setExpandedId] = useState<number | null>(null);
+    const [activePost, setActivePost] = useState<PostModel | null>(null)
     const posts = data?.pages.flatMap((p) => p.data) ?? [];
     const total = data?.pages[0]?.total ?? 0;
 
@@ -91,25 +91,8 @@ export default function ResultSection({
                     </div>
                     <LayoutGroup>
                         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 lg:gap-6 gap-4">
-                            {posts.map((post, index) => (
-                                <MorphingCard
-                                    key={index}
-                                    id={post.post_id as number}
-                                    title={post.title as string}
-                                    excerpt={post.excerpt as string}
-                                    date_published={convertShortDate(post.date_published as string)}
-                                    slug={post.slug as string}
-                                    program={post.post_program?.title ?? ""}
-                                    program_slug={post.post_program?.code ?? ""}
-                                    categories={post.categories}
-                                    thumbnail={post.thumbnail as string}
-                                    trailer={post.trailer}
-                                    banner={post.banner}
-                                    guest={post.guest}
-                                    isExpanded={expandedId === post.post_id}
-                                    onExpand={() => setExpandedId(post.post_id)}
-                                    onCollapse={() => setExpandedId(null)}
-                                >
+                            {posts.map((post) => (
+                                <div key={post.post_id} onClick={() => setActivePost(post)}>
                                     <HoverCard
                                         title={post.title ?? ""}
                                         description={post.excerpt ?? ""}
@@ -119,8 +102,9 @@ export default function ResultSection({
                                         banner={post.banner ?? ""}
                                         categories={post.categories}
                                         program_code={post.post_program.code}
+                                        key={post.post_id}
                                     />
-                                </MorphingCard>
+                                </div>
                             ))}
                         </div>
                     </LayoutGroup>
@@ -144,6 +128,28 @@ export default function ResultSection({
             {hasActiveFilters && hasNextPage && (
                 <div ref={observerRef} className="h-10 w-full mt-10" />
             )}
+
+            <Modal
+                open={activePost !== null}
+                onClose={() => setActivePost(null)}
+            >
+                {activePost && (
+                    <PostPreview
+                        title={activePost.title ?? ""}
+                        date_published={activePost.date_published ?? ""}
+                        slug={activePost.slug ?? ""}
+                        program={activePost.post_program.title}
+                        program_slug={activePost.post_program.code}
+                        excerpt={activePost.excerpt ?? ""}
+                        thumbnail={activePost.thumbnail ?? ""}
+                        banner={activePost.banner}
+                        trailer={activePost.trailer}
+                        guest={activePost.guest}
+                        categories={activePost.categories}
+                    />
+                )}
+            </Modal>
+
         </div>
     );
 }
