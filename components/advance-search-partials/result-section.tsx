@@ -39,11 +39,7 @@ export default function ResultSection({
 }: ResultSectionProps) {
     const observerRef = useRef<HTMLDivElement | null>(null);
     const [expandedId, setExpandedId] = useState<number | null>(null);
-    const posts = Array.from(
-        new Map(
-            (data?.pages.flatMap((p) => p.data) ?? []).map((p) => [p.post_id, p])
-        ).values()
-    );
+    const posts = data?.pages.flatMap((p) => p.data) ?? [];
     const total = data?.pages[0]?.total ?? 0;
 
     useEffect(() => {
@@ -129,7 +125,7 @@ export default function ResultSection({
                         </div>
                     </LayoutGroup>
                     <div className="mt-8  px-5 py-8 ">
-                        
+
                     </div>
                 </div>
             )}
