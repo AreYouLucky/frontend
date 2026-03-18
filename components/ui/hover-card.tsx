@@ -49,7 +49,7 @@ export default function HoverCard({ title="", description="", image="", banner =
       onMouseEnter={handleEnter}
       onMouseLeave={handleLeave}
     >
-      <div className="aspect-819/1024 hover:scale-y-105 duration-300 shadow-lg shadow-white/20 rounded-lg bg-black relative hover:border hover:border-[#00aeef] overflow-hidden">
+      <div className="aspect-819/1024 hover:scale-y-105 duration-300 shadow-lg shadow-white/20 rounded-lg bg-black relative hover:border hover:border-[#00aeef] overflow-hidden z-10">
         {image && (
           <div
             className="absolute inset-0 bg-center bg-cover blur-sm scale-110 opacity-100"

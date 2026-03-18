@@ -49,6 +49,7 @@ export default function AppShell({ mounts, children, }: { children: React.ReactN
           <footer className="relative z-0 pt-10">
             <Footer categories={mounts.categories} />
           </footer>
+
         </div>
       </div>
     </div>

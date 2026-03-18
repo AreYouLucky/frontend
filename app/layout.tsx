@@ -7,6 +7,7 @@ import { loadNavigationData } from '@/hooks/init/init';
 import { BackgroundProvider } from '@/components/layout-partials/background-context';
 import AppShell from '@/components/layout-partials/app-shell';
 import Ads from '@/components/home-partials/advertisements/ads';
+import Script from 'next/script';
 
 export const metadata: Metadata = {
     metadataBase: new URL("https://dostv.ph"),
@@ -85,6 +86,28 @@ export default async function RootLayout({ children }: { children: React.ReactNo
                         </div>
                     </BackgroundProvider>
                 </QueryProvider>
+
+                <Script id="smicos-token" strategy="afterInteractive">
+                    {` window.__pb_access_token = "6ab75e3f-ecbd-44e5-b720-e9fdf394452c";`}
+                </Script>
+                <Script id="smicos-widget" strategy="afterInteractive">
+                    {`(function() { const div = document.createElement('div'); 
+                        div.id = 'PurpleBugIncSmicosWidget';
+                        document.body.append(div);
+
+                        const stylesheet = document.createElement('link'); 
+                        stylesheet.rel = 'stylesheet';
+                        stylesheet.href = 'https://app.smicos.com/widget/index.css';
+                        document.head.append(stylesheet);
+
+                        const script = document.createElement('script'); 
+                        script.type = 'text/javascript'; 
+                        script.defer = true;
+                        script.src = 'https://app.smicos.com/widget/index.js';
+                        document.head.append(script);
+                        })();
+                    `}
+                </Script>
             </body>
         </html>
     )

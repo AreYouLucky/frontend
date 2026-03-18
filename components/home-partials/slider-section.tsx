@@ -19,7 +19,7 @@ export default function SliderSection({ posts, program= "", program_code = ""}: 
                 {posts.map((post) => (
                     <div
                         key={post.post_id}
-                        className="keen-slider__slide relative overflow-visible hover:z-40 cursor-pointer "
+                        className="keen-slider__slide relative overflow-visible hover:z-10 cursor-pointer "
                         onClick={() => setActivePost(post)}
                     >
                         <HoverCard
