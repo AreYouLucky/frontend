@@ -17,7 +17,7 @@ export default function Ads({ads}: {ads: AdvertisementModel[]}) {
     if (!visible) return null;
 
     return (
-        <div className="fixed right-4 bottom-3 w-84  shadow-sm border-2  shadow-white/90 rounded-lg z-50">
+        <div className="fixed left-4 bottom-3 w-84  shadow-sm border-2  shadow-white/90 rounded-lg z-50">
             <button onClick={closeAd} className="absolute top-0 right-0 text-white font-bold text-lg z-30 bg-black rounded-full px-2">✕</button>
             <AdsCard ads={ads}/>
         </div>
