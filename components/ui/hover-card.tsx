@@ -49,7 +49,7 @@ export default function HoverCard({ title="", description="", image="", banner =
       onMouseEnter={handleEnter}
       onMouseLeave={handleLeave}
     >
-      <div className="aspect-819/1024 hover:scale-y-105 duration-300 shadow-lg shadow-white/20 rounded-lg bg-black relative hover:border hover:border-[#00aeef] overflow-hidden z-10">
+      <div className="aspect-819/1024 hover:scale-y-105 duration-300 shadow-lg shadow-white/20 rounded-lg bg-black relative hover:border hover:border-[#00aeef] overflow-hidden ">
         {image && (
           <div
             className="absolute inset-0 bg-center bg-cover blur-sm scale-110 opacity-100"
@@ -80,7 +80,7 @@ export default function HoverCard({ title="", description="", image="", banner =
             animate={{ opacity: 1, scale: 1.35, y: 0 }}
             exit={{ opacity: 0, scale: 0.9 }}
             transition={{ duration: 0.25 }}
-            className="absolute left-1/2 top-0 z-50 w-full -translate-x-1/2 overflow-hidden rounded-md bg-zinc-900 shadow-xl p-1 border border-white/60 shadow-[#00aeef]"
+            className="absolute left-1/2 top-0 z-40 w-full -translate-x-1/2 overflow-hidden rounded-md bg-zinc-900 shadow-xl p-1 border border-white/60 shadow-[#00aeef]"
           >
             {/* Video Preview */}
             {video ? (

@@ -108,9 +108,11 @@ export default function ResultSection({
                             ))}
                         </div>
                     </LayoutGroup>
-                    <div className="mt-8  px-5 py-8 ">
+                    {!isFetchingNextPage && (
+                        <div className="lg:mt-8  px-5 lg:py-8 ">
 
-                    </div>
+                        </div>
+                    )}
                 </div>
             )}
 

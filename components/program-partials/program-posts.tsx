@@ -47,7 +47,7 @@ export default function ProgramPosts({ code }: { code: string }) {
   }, [fetchNextPage, hasNextPage, isFetchingNextPage]);
 
   return (
-    <div className="w-full">
+    <div className="w-full lg:pb-20">
       {posts && posts.length > 0 &&
         <h2 className="lg:text-[17px] md:text-[13px] text-[11px] font-bold tracking-widest text-white uppercase lg:mb-4 md:mb-3 mb-3">
           Archive Episodes

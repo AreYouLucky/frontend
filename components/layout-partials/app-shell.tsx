@@ -46,7 +46,7 @@ export default function AppShell({ mounts, children, }: { children: React.ReactN
           <main className="w-full min-h-screen overflow-x-hidden z-10 relative">
             {children}
           </main>
-          <footer className="relative z-0 pt-10">
+          <footer className="relative z-0">
             <Footer categories={mounts.categories} />
           </footer>
 
