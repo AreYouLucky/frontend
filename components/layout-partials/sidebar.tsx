@@ -96,16 +96,6 @@ export default function Sidebar({
                             <span>About</span>
                         </PrefetchLink>
                         <PrefetchLink
-                            href="/testimonials"
-                            className={cn(
-                                "text-[14px] font-semibold flex items-center gap-3 rounded px-2 py-2 hover:scale-105 duration-300",
-                                collapsed && "justify-start", path == '/testimonials' ? " text-white" : "text-gray-400"
-                            )}
-                        >
-                            <MicVocal className={`h-5 w-5 shrink-0 font-bold ${path == '/testimonials' && " text-[#00aeef]"}`} />
-                            <span>Testimonials</span>
-                        </PrefetchLink>
-                        <PrefetchLink
                             href="/partners"
                             className={cn(
                                 "text-[14px] font-semibold flex items-center gap-3 rounded px-2 py-2 hover:scale-105 duration-300",

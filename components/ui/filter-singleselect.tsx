@@ -34,7 +34,7 @@ export default function FilterSingleSelect({
       <button
         type="button"
         onClick={() => setIsOpen((prev) => !prev)}
-        className="flex h-14 w-full items-center justify-between rounded-2xl border border-white/70 px-4 py-2 text-left text-white transition hover:bg-white/10"
+        className="flex h-12 md:h-14 w-full items-center justify-between rounded-2xl border border-white/70 px-4 py-2 text-left text-white transition hover:bg-white/10"
       >
         <div className="min-w-0">
           <p className="text-[8px] uppercase tracking-[0.3em] text-white/65">

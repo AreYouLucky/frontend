@@ -121,12 +121,12 @@ export default function Navbar({
                 </div>
 
                 {/* Right */}
-                <div className="flex items-center md:gap-3 gap-1 justify-end lg:w-full">
+                <div className="flex items-center md:gap-3 gap-2 justify-end lg:w-full">
                     {!hideSearchBar && <SearchBar />}
                     <Socials className="hidden lg:flex" />
                     <button
                         onClick={onMenuClick}
-                        className="lg:hidden rounded-md p-2 transition"
+                        className="lg:hidden rounded-md md:p-2 transition"
                         aria-label="Open menu"
                     >
                         <Menu className="h-5 w-5 text-white" />

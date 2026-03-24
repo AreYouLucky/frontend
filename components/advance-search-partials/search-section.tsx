@@ -59,15 +59,15 @@ export default function SearchSection({ item, handleChange, handleArrayChange, s
 
     return (
         <div className=''>
-            <div className='grid gap-2 lg:grid-cols-6 md:grid-cols-3 grid-cols-2'>
-                <div className="relative h-14">
-                    <Search className="pointer-events-none absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2 text-white/40" />
+            <div className='grid md:gap-2 gap-1 lg:grid-cols-6 md:grid-cols-3 grid-cols-2'>
+                <div className="relative md:h-14 h-12 ">
+                    <Search className="pointer-events-none absolute left-2 md:left-4 top-1/2 h-4 w-4 -translate-y-1/2 text-white/40" />
                     <InputText
                         name="search"
                         value={item.search}
                         onChange={handleChange}
                         placeholder="Search any keyword..."
-                        className="h-14 rounded-2xl border-white/80  pl-11 text-white placeholder:text-white/90"
+                        className="md:h-14 h-12 rounded-2xl border-white/80  pl-7 md:pl-11 text-white placeholder:text-white/90 placeholder:lg:text-sm placeholder:text-xs"
                     />
                 </div>
                 <div>

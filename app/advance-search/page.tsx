@@ -41,7 +41,7 @@ export default function AdvanceSearch() {
         status,
     } = useGetAdvanceSearchedPosts({ ...item });
     return (
-        <div className='w-full lg:px-13 md:px-8 px-4 pt-22 lg:pt-25  min-h-screen '>
+        <div className='w-full lg:px-13 md:px-8 px-4 pt-18 lg:pt-25  min-h-screen '>
             <section className='w-full lg:pb-15 pb-8'>
                 <HeaderSection />
             </section>

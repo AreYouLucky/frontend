@@ -16,9 +16,9 @@ function YoutubeList() {
     return (
         <div className="w-full mb-4 block py-4 md:py-6 lg:py-8 lg:px-6 overflow-hidden border-y border-white/50 ">
 
-            <div className="flex items-center justify-between gap-4">
-                <div className="flex items-center gap-2 border-l border-white/30 pl-3">
-                    <h3 className="text-[15px] lg:text-lg text-white font-bold uppercase">
+            <div className="flex items-center justify-between gap-4 px-3">
+                <div className="flex items-center gap-2 border-l border-white/30 pl-1.5 md:pl-3">
+                    <h3 className="lg:text-[20px] md:text-[15px] text-[13px] text-white font-bold uppercase">
                         Top 10 YouTube Videos
                     </h3>
                 </div>

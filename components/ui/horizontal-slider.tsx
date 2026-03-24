@@ -19,7 +19,7 @@ export default function HorizontalSlider({
         drag: !disabled,
         slides: {
             perView: 3,
-            spacing: 8,
+            spacing: 5,
             origin: "auto",
         },
         slideChanged(slider) {
@@ -48,7 +48,7 @@ export default function HorizontalSlider({
     })
 
     return (
-        <div className="relative w-full z-10 lg:px-10 md:px-6 px-0">
+        <div className="relative w-full z-10 lg:px-15 md:px-6 px-0">
 
             <div className="pointer-events-none absolute left-0 top-0 z-10 h-full w-20 bg-linear-to-r from-black/70 to-transparent" />
 

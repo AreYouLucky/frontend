@@ -62,7 +62,7 @@ export default function SearchBar() {
   };
 
   return (
-    <div ref={containerRef} className="relative w-48 md:w-95 lg:w-100">
+    <div ref={containerRef} className="relative w-55 md:w-95 lg:w-100">
       <div
         className="w-full group flex items-center lg:gap-3 gap-2 overflow-hidden rounded-xl bg-zinc-900/10 border border-white/60  lg:px-3 px-2 py-px text-white   transition duration-300  focus-within:bg-black/50 "
       >

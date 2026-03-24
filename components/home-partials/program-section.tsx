@@ -31,7 +31,7 @@ export default function ProgramSection() {
                         <>
                             <div className='relative'>
                                 <div className='px-2 lg:px-5 w-full flex flex-row justify-between items-center md:mb-6 mb-2'>
-                                    <h1 className=" lg:text-[20px] md:text-[15px] text-[13px] font-bold  tracking-wider px-5 border-l border-white/40 text-white relative uppercase ">
+                                    <h1 className=" lg:text-[20px] md:text-[15px] text-[13px] font-bold  tracking-wider pl-1.5 md:px-5 border-l border-white/40 text-white relative uppercase ">
                                         {program.title}
                                     </h1>
                                     <Link href={`/program/${program.code}`} className='font-semibold  h-fit rounded-lg px-4 md:py-1.5 py-1 text-[12px] md:text-[15px] border border-white/40 text-white'>

@@ -34,7 +34,7 @@ function PostPreview({
 }: PostPreviewProps) {
 
     return (
-        <div className="w-full h-full rounded-xl overflow-hidden border border-white">
+        <div className="w-full h-full rounded-xl overflow-hidden border border-white ">
             <BackgroundImg
                 imageSrc={`/storage/images/post_images/thumbnails/${thumbnail}`}
                 className="min-h-105 md:min-h-100 lg:min-h-130 "
@@ -44,11 +44,11 @@ function PostPreview({
                     w-full h-full text-white
                     min-h-105 md:min-h-100 lg:min-h-130
                     bg-linear-to-l from-slate-950 via-slate-950/90 to-slate-950/70
-                    grid grid-cols-1 md:grid-cols-2 items-stretch
+                    grid grid-cols-1 md:grid-cols-2 items-stretch py-5
                 "
                 >
                     <div className="order-2 md:order-1 flex items-center h-full ">
-                        <div className="px-5 md:py-6 py-0 pb-5  md:px-10 lg:pl-12 lg:pr-0  max-w-xl md:space-y-3 space-y-1.5">
+                        <div className="px-5 md:py-6 py-0 pb-5  md:px-10 lg:pl-12 lg:pr-0  max-w-xl md:space-y-3 space-y-2">
                             <p className="text-[11px]  rounded-md w-fit py-0.5 font-semibold tracking-wide">
                                 {convertLongDate(date_published)}
                             </p>

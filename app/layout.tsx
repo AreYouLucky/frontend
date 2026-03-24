@@ -108,6 +108,13 @@ export default async function RootLayout({ children }: { children: React.ReactNo
                         })();
                     `}
                 </Script>
+                <Script id="smicos-config" strategy="beforeInteractive">
+                    {`
+                        window.SmicosSettings = {
+                            autoOpen: false
+                        };
+                    `}
+                </Script>
             </body>
         </html>
     )
