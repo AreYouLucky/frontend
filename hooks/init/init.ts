@@ -4,6 +4,7 @@ export const loadNavigationData = async () => {
   try {
     const res = await fetch(`${baseURL}/api/load-navigation-data`, {
       headers: {
+        Accept: "application/json",
         "X-API-TOKEN": process.env.NEXT_PUBLIC_FRONTEND_API_TOKEN ?? "",
         "content-type": "application/json",
       },

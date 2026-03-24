@@ -8,6 +8,7 @@ export const getProgramInfo = async (slug: string) => {
       `${baseURL}/api/get-program-info/${slug}`,
       {
         headers: {
+          Accept: "application/json",
           "X-API-TOKEN": process.env.NEXT_PUBLIC_FRONTEND_API_TOKEN ?? "",
           "content-type": "application/json",
         },

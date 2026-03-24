@@ -5,6 +5,7 @@ export const getPartners = async () => {
       `${baseURL}/api/load-partners`,
       {
         headers: {
+          Accept: "application/json",
           "X-API-TOKEN": process.env.NEXT_PUBLIC_FRONTEND_API_TOKEN ?? "",
           "content-type": "application/json",
         },

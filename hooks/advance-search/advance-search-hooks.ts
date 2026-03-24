@@ -28,6 +28,7 @@ export const loadSearchFilters = async () => {
   try {
     const res = await fetch(`${baseURL}/api/load-search-mounts`, {
       headers: {
+        Accept: "application/json",
         "X-API-TOKEN": process.env.NEXT_PUBLIC_FRONTEND_API_TOKEN ?? "",
         "content-type": "application/json",
       },
@@ -90,6 +91,7 @@ export function useGetAdvanceSearchedPosts(filters: AdvanceSearchFilters) {
         headers: {
           Accept: "application/json",
           "X-API-TOKEN": process.env.NEXT_PUBLIC_FRONTEND_API_TOKEN!,
+          "content-type": "application/json",
         },
       });
 
