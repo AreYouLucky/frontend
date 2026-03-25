@@ -9,7 +9,7 @@ import AppShell from '@/components/layout-partials/app-shell';
 import Ads from '@/components/home-partials/advertisements/ads';
 import Script from 'next/script';
 
-const baseURL = process.env.NEXT_PUBLIC_URL;
+const baseURL = process.env.NEXT_PUBLIC_URL || "http://znjvbnrlbmq.dostv.ph";
 export const metadata: Metadata = {
     metadataBase: new URL(`${baseURL}`),
     title: "DOSTv: Science For The People",

@@ -10,7 +10,7 @@ type Props = {
   params: Promise<{ slug: string }>;
 };
 
-const baseURL = process.env.NEXT_PUBLIC_URL;
+const baseURL = process.env.NEXT_PUBLIC_URL || "http://znjvbnrlbmq.dostv.ph";
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;

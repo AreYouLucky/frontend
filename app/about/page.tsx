@@ -1,7 +1,6 @@
 import LinkPlayer from "@/components/ui/link-player";
 import { Metadata } from "next";
-const baseURL = process.env.NEXT_PUBLIC_URL;
-
+const baseURL = process.env.NEXT_PUBLIC_URL || "http://znjvbnrlbmq.dostv.ph";
 export const metadata: Metadata = {
     metadataBase: new URL(`${baseURL}`),
     title: "About DOSTv | Science for the People",

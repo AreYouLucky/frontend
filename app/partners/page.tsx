@@ -3,7 +3,7 @@ import PartnersList from '@/components/partners-partials/partners-list';
 import { Metadata } from "next";
 import Image from 'next/image';
 
-const baseURL = process.env.NEXT_PUBLIC_URL;
+const baseURL = process.env.NEXT_PUBLIC_URL || "http://znjvbnrlbmq.dostv.ph";
 export const metadata: Metadata = {
     metadataBase: new URL(`${baseURL}`),
     title: "DOSTv Partners | Collaborating for Science Communication",
