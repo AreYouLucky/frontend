@@ -133,7 +133,7 @@ export default function AboutPage() {
         />
         <div className="pointer-events-none absolute inset-x-0 bottom-0 h-32 bg-linear-to-t from-[#050505] to-transparent md:h-48" />
       </div>
-      <section className="relative z-10 mx-auto -mt-16 w-full   pb-10 md:-mt-24 md:pb-14">
+      <section className="relative z-10 mx-auto -mt-10 w-full   pb-10 md:-mt-24 md:pb-14">
         <div className="overflow-hidden border-y border-white/10 bg-zinc-950/80 shadow-[0_24px_80px_rgba(0,0,0,0.55)] backdrop-blur">
           <div className="h-1 w-full bg-linear-to-r from-transparent via-[#0931e5] to-transparent" />
           <div className="grid gap-8 p-6 md:grid-cols-[1.15fr_1fr] md:p-10 lg:p-20">
