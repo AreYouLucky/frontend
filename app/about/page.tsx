@@ -138,8 +138,8 @@ export default function AboutPage() {
           <div className="h-1 w-full bg-linear-to-r from-transparent via-[#0931e5] to-transparent" />
           <div className="grid gap-8 p-6 md:grid-cols-[1.15fr_1fr] md:p-10 lg:p-20">
             <div className="fade-right">
-              <p className="mb-4 inline-flex rounded-full border border-[#00aeef]/40 bg-[#004a95]/15 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-white">
-                About DOSTv
+              <p className="mb-4 inline-flex rounded-full border border-[#00aeef]/40 bg-[#004a95]/15 px-3 py-1 text-xs font-semibold  tracking-[0.2em] text-white">
+                ABOUT DOSTv
               </p>
               <h1 className="text-3xl font-black leading-tight md:text-5xl">
                 Science for the People,
