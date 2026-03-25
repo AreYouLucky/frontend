@@ -9,8 +9,9 @@ import AppShell from '@/components/layout-partials/app-shell';
 import Ads from '@/components/home-partials/advertisements/ads';
 import Script from 'next/script';
 
+const baseURL = process.env.NEXT_PUBLIC_URL;
 export const metadata: Metadata = {
-    metadataBase: new URL("https://dostv.ph"),
+    metadataBase: new URL(`${baseURL}`),
     title: "DOSTv: Science For The People",
     keywords: [
         "DOSTv",
@@ -42,7 +43,7 @@ export const metadata: Metadata = {
             "DOSTV brings science closer to every Filipino. It showcases programs, stories, and innovations from the Department of Science and Technology.",
         images: [
             {
-                url: "/storage/images/logos/dostv.png",
+                url: `${baseURL}/storage/images/logos/dostv.png`,
                 width: 1200,
                 height: 630,
                 alt: "DOSTV Logo",
@@ -54,10 +55,10 @@ export const metadata: Metadata = {
         title: "DOSTv",
         description:
             "DOSTV brings science closer to every Filipino.",
-        images: ["/storage/images/logos/dostv.png"],
+        images: [`${baseURL}/storage/images/logos/dostv.png`],
     },
     icons: {
-        icon: "/storage/images/logos/logo.png",
+        icon: `${baseURL}/storage/images/logos/logo.png`,
     },
 };
 

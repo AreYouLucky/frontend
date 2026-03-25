@@ -11,6 +11,7 @@ import SetBg from '@/components/ui/set-bg';
 type Props = {
     params: Promise<{ slug: string }>;
 };
+const baseURL = process.env.NEXT_PUBLIC_URL;
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const { slug } = await params;
 
@@ -24,10 +25,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         };
     }
 
-    const image = `/storage/images/program_images/thumbnails/${program.image}`;
+    const image = `${baseURL}/storage/images/program_images/thumbnails/${program.image}`;
 
     return {
-        metadataBase: new URL("https://dostv.ph"),
+        metadataBase: new URL(`${baseURL}`),
         title: program.title,
         description: stripHtml(program.description),
         keywords: [
@@ -66,7 +67,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
             images: [image],
         },
         icons: {
-            icon: "/storage/images/logos/logo.png",
+            icon: `${baseURL}/storage/images/logos/logo.png`,
         },
     };
 }

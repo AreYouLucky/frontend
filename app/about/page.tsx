@@ -1,8 +1,9 @@
 import LinkPlayer from "@/components/ui/link-player";
 import { Metadata } from "next";
+const baseURL = process.env.NEXT_PUBLIC_URL;
 
 export const metadata: Metadata = {
-    metadataBase: new URL("https://dostv.ph"),
+    metadataBase: new URL(`${baseURL}`),
     title: "About DOSTv | Science for the People",
     description:
         "Learn about DOSTv, the science communication platform of the Department of Science and Technology (DOST-STII). Discover its mission, milestones, awards, and impact in bringing science closer to every Filipino.",
@@ -35,11 +36,11 @@ export const metadata: Metadata = {
         title: "About DOSTv",
         description:
             "Discover the story of DOSTv — the Department of Science and Technology's platform for bringing science, technology, and innovation stories to Filipinos nationwide.",
-        url: "https://dostv.ph/about",
+        url: `${baseURL}/about`,
         siteName: "DOSTv",
         images: [
             {
-                url: "/storage/images/logos/dostv.png",
+                url: `${baseURL}/storage/images/logos/dostv.png`,
                 width: 1200,
                 height: 630,
                 alt: "About DOSTv - Science for the People",
@@ -54,11 +55,11 @@ export const metadata: Metadata = {
         title: "About DOSTv",
         description:
             "Discover the mission, milestones, and impact of DOSTv in bringing science and technology closer to Filipinos.",
-        images: ["/storage/images/logos/dostv.png"],
+        images: [`${baseURL}/storage/images/logos/dostv.png`],
     },
 
     icons: {
-        icon: "/storage/images/logos/logo.png",
+        icon: `${baseURL}/storage/images/logos/logo.png`,
     },
 };
 

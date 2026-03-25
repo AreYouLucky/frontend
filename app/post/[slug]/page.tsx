@@ -10,6 +10,8 @@ type Props = {
   params: Promise<{ slug: string }>;
 };
 
+const baseURL = process.env.NEXT_PUBLIC_URL;
+
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
 
@@ -24,11 +26,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 
   const image = post.banner
-    ? `/storage/images/post_images/banners/${post.banner}`
-    : `/storage/images/post_images/thumbnails/${post.thumbnail}`;
+    ? `${baseURL}/storage/images/post_images/banners/${post.banner}`
+    : `${baseURL}/storage/images/post_images/thumbnails/${post.thumbnail}`;
 
   return {
-    metadataBase: new URL("https://dostv.ph"),
+    metadataBase: new URL(`${baseURL}`),
     title: post.title,
     description: post.excerpt,
     keywords: [
@@ -76,7 +78,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       images: [image],
     },
     icons: {
-      icon: '/storage/images/logos/logo.png',
+      icon: `${baseURL}/storage/images/logos/logo.png`,
     },
   };
 }

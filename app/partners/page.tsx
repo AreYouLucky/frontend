@@ -3,8 +3,9 @@ import PartnersList from '@/components/partners-partials/partners-list';
 import { Metadata } from "next";
 import Image from 'next/image';
 
+const baseURL = process.env.NEXT_PUBLIC_URL;
 export const metadata: Metadata = {
-    metadataBase: new URL("https://dostv.ph"),
+    metadataBase: new URL(`${baseURL}`),
     title: "DOSTv Partners | Collaborating for Science Communication",
     description:
         "Discover the organizations, institutions, and agencies partnering with DOSTv to bring science, technology, and innovation stories closer to Filipinos nationwide.",
@@ -35,11 +36,11 @@ export const metadata: Metadata = {
         title: "DOSTv Partners",
         description:
             "Explore the institutions and organizations collaborating with DOSTv to expand science communication and innovation awareness across the Philippines.",
-        url: "https://dostv.ph/partners",
+        url: `${baseURL}/partners`,
         siteName: "DOSTv",
         images: [
             {
-                url: "/storage/images/partners/cta.png",
+                url: `${baseURL}/storage/images/partners/cta.png`,
                 width: 1200,
                 height: 630,
                 alt: "DOSTv Partners",
@@ -54,11 +55,11 @@ export const metadata: Metadata = {
         title: "DOSTv Partners",
         description:
             "Meet the organizations working with DOSTv to promote science, technology, and innovation in the Philippines.",
-        images: ["/storage/images/partners/cta.png"],
+        images: [`${baseURL}/storage/images/partners/cta.png`],
     },
 
     icons: {
-        icon: "/storage/images/logos/logo.png",
+        icon: `${baseURL}/storage/images/logos/logo.png`,
     },
 };
 
