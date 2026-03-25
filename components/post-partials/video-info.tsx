@@ -37,7 +37,7 @@ export default function VideoInfo({ currentPost, className, children }: { curren
                         </div>
 
                     </div>
-                    <div className=" md:px-6 px-4 py-4 md:py-0 flex justify-center flex-col border-none md:border-l border-white/40">
+                    <div className=" md:px-6 px-4 py-4 md:py-0 flex justify-center flex-col border-none md:border-l lg:border-l border-white/40">
                         {children}
                     </div>
                 </div>
