@@ -25,9 +25,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     };
   }
 
-  const image = post.banner
-    ? `${baseURL}/storage/images/post_images/banners/${post.banner}`
-    : `${baseURL}/storage/images/post_images/thumbnails/${post.thumbnail}`;
+  const image = `${baseURL}/storage/images/post_images/thumbnails/${post.thumbnail}`;
 
   return {
     metadataBase: new URL(`${baseURL}`),
