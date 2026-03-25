@@ -1,6 +1,7 @@
 import { getPartners } from '@/hooks/partner/partner-hooks'
 import PartnersList from '@/components/partners-partials/partners-list';
 import { Metadata } from "next";
+import Image from 'next/image';
 
 export const metadata: Metadata = {
     metadataBase: new URL("https://dostv.ph"),
@@ -38,7 +39,7 @@ export const metadata: Metadata = {
         siteName: "DOSTv",
         images: [
             {
-                url: "/storage/images/logos/dostv.png",
+                url: "/storage/images/partners/cta.png",
                 width: 1200,
                 height: 630,
                 alt: "DOSTv Partners",
@@ -53,7 +54,7 @@ export const metadata: Metadata = {
         title: "DOSTv Partners",
         description:
             "Meet the organizations working with DOSTv to promote science, technology, and innovation in the Philippines.",
-        images: ["/storage/images/logos/dostv.png"],
+        images: ["/storage/images/partners/cta.png"],
     },
 
     icons: {
@@ -67,10 +68,10 @@ export default async function PartnersPage() {
     return (
         <div className='overflow-hidden bg-[#050505]/50 text-white'>
 
-            <section className='relative isolate lg:pt-24 md:pt-20 pt-16 '>
+            <section className='relative isolate lg:pt-24 md:pt-20 pt-20 '>
 
-                <div className='relative mx-auto grid w-full gap-10 px-8 pb-12 md:px-15 lg:grid-cols-[1.15fr_0.85fr] lg:pt-12 lg:pb-30 '>
-                    <div className='fade-up'>
+                <div className='relative mx-auto flex flex-col-reverse lg:flex-row items-center w-full md:gap-10 px-8 pb-12 md:px-15 lg:pt-12 lg:pb-30 '>
+                    <div className='fade-up w-full'>
                         <h1 className='mt-5 max-w-4xl text-4xl font-black  lg:text-5xl md:text-4xl'>
                             Partner with DOSTv
                             <span className='block text-[#00aeef] uppercase lg:text-[40px] md:text-[25px]'>
@@ -94,17 +95,14 @@ export default async function PartnersPage() {
                             </div>
                         </div>
                     </div>
-                    <div className='fade-left'>
-                        {/* <Image
-                                src="/storage/images/logos/dostv.png"
+                    <div className='fade-left md:w-300'>
+                        <Image
+                              src="/storage/images/partners/cta.png"
                                 alt="DOSTV Logo"
                                 width={600} height={600}
-                                className="h-auto w-full "
+                                className="h-auto w-full rounded-lg"
                                 priority
-                            /> */}
-                        <div className='w-full h-full rounded-lg bg-white/50 flex justify-center items-center font-bold text-3xl'>
-                            Banner image with partners
-                        </div>
+                            />
                     </div>
 
                 </div>

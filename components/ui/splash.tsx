@@ -13,7 +13,7 @@ export default function Splash({ children }: { children: React.ReactNode }) {
 
       <div
         className={clsx(
-          "transition-opacity duration-300",
+          "transition-opacity duration-300 z-50",
           ready ? "opacity-100" : "opacity-0 pointer-events-none"
         )}
       >

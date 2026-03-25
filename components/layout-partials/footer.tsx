@@ -16,13 +16,15 @@ function Footer({ categories }: { categories: CategoriesModel[] }) {
                 <div className=' grid lg:grid-cols-2 grid-cols-1 gap-2 md:gap-4 p-3 lg:col-span-1 col-span-2'>
                     <div className='flex flex-col lg:gap-5 gap-3 justify-center order-2 lg:order-1'>
                         <div className='text-lg font-bold uppercase leading-tight flex items-center gap-2'>
-                            <Image
-                                src="/storage/images/logos/DOSTHOR.png"
-                                alt="DOSTV Logo"
-                                width={200} height={140}
-                                className="md:h-15 w-auto h-12"
-                                priority
-                            />
+                            <a href="https://dost.gov.ph/" target="_blank" rel="noopener noreferrer">
+                                <Image
+                                    src="/storage/images/logos/DOSTHOR.png"
+                                    alt="DOSTV Logo"
+                                    width={200} height={140}
+                                    className="md:h-15 w-auto h-12"
+                                    priority
+                                />
+                            </a>
                         </div>
 
                         <div className=''>
@@ -42,7 +44,7 @@ function Footer({ categories }: { categories: CategoriesModel[] }) {
                                 href="tel:+6328640000"
                             >
                                 <MdPhone />
-                                09193754335 
+                                09193754335
                             </a>
                         </div>
 
@@ -54,12 +56,17 @@ function Footer({ categories }: { categories: CategoriesModel[] }) {
                     </div>
                 </div>
             </div>
-            <div className='flex justify-between items-center py-3 text-white/40'>
-                <div>
+            <div className='flex justify-start items-center py-5 text-white/50 gap-2'>
+                <div className='border-r border-white/40 pr-4'>
                     Copyright &copy; {new Date().getFullYear()} DOSTV - All right reserved
                 </div>
                 <div>
-                    Terms of Use | Privacy Policy
+                    <a href="/TOU.pdf" target="_blank" rel="noopener noreferrer">
+                        Terms of Use |
+                    </a>
+                    <a href="https://www.stii.dost.gov.ph/transparency/about-us/stii-privacy-policy" target="_blank" rel="noopener noreferrer">
+                        Privacy Policy
+                    </a>
                 </div>
             </div>
         </footer>
