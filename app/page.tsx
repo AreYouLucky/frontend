@@ -10,7 +10,7 @@ export default async function HomePage() {
     <Splash>
       <div className=''>
         <Banner banners={homePageMounts.banners} />
-        <div className='lg:-mt-30 md:-mt-20 mt-2 pb-5'>
+        <div className='lg:-mt-30 md:-mt-20 -mt-13 pb-5'>
           <HomeContent props={homePageMounts} />
         </div>
       </div>

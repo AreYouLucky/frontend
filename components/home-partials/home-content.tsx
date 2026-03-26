@@ -9,11 +9,11 @@ import DailyVerse from './verse'
 export default function HomeContent({ props }: { props: homeMountProps }) {
 
     return (
-        <div className=' flex flex-col lg:gap-8 md:gap-2 gap-1 md:py-2 py-3'>
+        <div className=' flex flex-col lg:gap-8 md:gap-2 gap-4 md:py-2 py-3'>
             <div className=''>
-                <div className='lg:pb-15 md:pb-8 pb-8'>
+                <div className='lg:pb-15 md:pb-8 pb-10'>
                     <div className='px-2 lg:px-5 '>
-                        <h1 className=" lg:text-[20px] md:text-[15px] text-[13px] font-bold md:mb-6 mb-2 tracking-wider pl-1.5 md:px-5 border-l border-white/40 text-white relative uppercase ">
+                        <h1 className=" lg:text-[20px] md:text-[15px] text-[13px] font-bold md:mb-6 mb-4 tracking-wider pl-1.5 md:px-5 border-l border-white/40 text-white relative uppercase ">
                             Featured Videos
                         </h1>
                     </div>
@@ -22,12 +22,12 @@ export default function HomeContent({ props }: { props: homeMountProps }) {
                         <SliderSection posts={props.featured_posts} />
                     </div>
                 </div>
-                <div className='lg:pb-6 md:pb-4 pb-2'>
+                <div className='lg:pb-6 md:pb-4 pb-4'>
                     <YoutubeList />
                 </div>
                 <div>
                     <div className='px-2 lg:px-5'>
-                        <h1 className=" lg:text-[20px] md:text-[15px] text-[13px] font-bold md:mb-6 mb-2 tracking-wider px-5 border-l border-white/40 text-white relative uppercase ">
+                        <h1 className=" lg:text-[20px] md:text-[15px] text-[13px] font-bold md:mb-6 mb-4 tracking-wider  pl-1.5 md:px-5 border-l border-white/40 text-white relative uppercase ">
                             New & Trending
                         </h1>
                     </div>

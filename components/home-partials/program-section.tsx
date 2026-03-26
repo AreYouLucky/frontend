@@ -30,7 +30,7 @@ export default function ProgramSection() {
                     {program.episodes && program?.episodes?.length > 0 &&
                         <>
                             <div className='relative'>
-                                <div className='px-2 lg:px-5 w-full flex flex-row justify-between items-center md:mb-6 mb-2'>
+                                <div className='px-2 lg:px-5 w-full flex flex-row justify-between items-center md:mb-6 mb-4'>
                                     <h1 className=" lg:text-[20px] md:text-[15px] text-[13px] font-bold  tracking-wider pl-1.5 md:px-5 border-l border-white/40 text-white relative uppercase ">
                                         {program.title}
                                     </h1>
