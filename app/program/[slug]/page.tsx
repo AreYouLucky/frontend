@@ -81,7 +81,7 @@ export default async function ProgramPage({ params }: Props) {
         <div className="w-full lg:px-13 md:px-5 pt-12 md:pt-18 lg:pt-20 ">
             <SetBg thumbnail={`/storage/images/program_images/thumbnails/${program.image}`} />
             <div className="flex flex-col md:flex-row gap-4 items-start pb-8 ">
-                <div className="flex-1 lg:pr-15 md:p-6 p-4 py-4 border-none md:border-r lg:border-r border-white/40 fade-up">
+                <div className="flex-1 lg:pr-15 md:p-6 p-4 py-4  border-r border-transparent md:border-white/40 fade-up">
                     <ProgramCard program={program} total={data.total} />
                 </div>
 
