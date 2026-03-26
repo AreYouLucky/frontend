@@ -1,8 +1,10 @@
+"use client"
 import React from 'react'
 import { PostModel } from '@/types/models'
 import LinkPlayer from '../ui/link-player';
 import { convertLongDate } from '@/lib/utils';
-export default function VideoInfo({ currentPost, className, children }: { currentPost: PostModel, className: string, children: React.ReactNode }) {
+import ShareButtons from './sharebuttons';
+export default function VideoInfo({ currentPost, className, children, url }: { currentPost: PostModel, className: string, children: React.ReactNode, url: string }) {
 
     function popTags(text: string) {
         if (!text) return
@@ -34,6 +36,9 @@ export default function VideoInfo({ currentPost, className, children }: { curren
                                 />
                             </div>
                             <p className='text-sm poppins-semibold md:mt-7 mt-3 m mb-2 flex gap-1 flex-wrap px-4'>{popTags(currentPost?.tags as string)}</p>
+                        </div>
+                        <div className='flex gap-2 mt-5 md:mt-2 px-2 md:px-0'>
+                            <ShareButtons url={url} className="" />
                         </div>
 
                     </div>

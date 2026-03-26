@@ -93,7 +93,7 @@ export default async function PostPage({ params }: Props) {
     <div className="w-full pt-16 md:pt-16 lg:pt-16 bg-linear-to-b from-black/80 to-transparent from-0% to-20%">
       <SetBg thumbnail={`/storage/images/post_images/thumbnails/${currentPost.thumbnail}`} />
       <div className="flex  flex-col gap-2 mb-8">
-        <VideoInfo currentPost={currentPost} className="mb-4 w-full">
+        <VideoInfo currentPost={currentPost}  url={`${baseURL}/post/${currentPost.slug}`} className="mb-4 w-full">
           <div className="w-65 md:px-3 z-50">
             <div className=" lg:text-[18px] md:text-[13px] text-[11px] font-bold tracking-widest text-white uppercase">
               Up NEXT
