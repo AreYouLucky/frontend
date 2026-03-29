@@ -62,7 +62,7 @@ export default function SidebarCollapseGroup({
                         <PrefetchLink
                             key={index}
                             href={`/program/${item.code}`}
-                            className={`rounded px-2 py-1 text-[13.3px]  hover:bg-gray-100 hover:text-black  duration-200 font-regular ${path === `/program/${item.code}` ? "text-white" : "text-gray-300"    }`}
+                            className={`rounded px-2 py-1 text-[13.3px]  hover:bg-gray-100 hover:text-black  duration-200 font-regular ${path === `/program/${item.code}` ? "text-[#00aeef]" : "text-gray-300"    }`}
                         >
                             {item.title}
                         </PrefetchLink>

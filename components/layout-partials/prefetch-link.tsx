@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import { useState } from 'react'
-
+import { usePathname } from 'next/navigation'
 type PrefetchLinkProps = {
   href: string
   className?: string
@@ -19,7 +19,7 @@ export default function PrefetchLink({
   onHoverEnd,
 }: PrefetchLinkProps) {
   const [active, setActive] = useState(false)
-
+  const pathname = usePathname()
   return (
     <Link
       href={href}
@@ -31,7 +31,7 @@ export default function PrefetchLink({
       onMouseLeave={() => {
         onHoverEnd?.()
       }}
-      className={ className}
+      className={ className + ' ' + ( pathname === href ? 'text-[#00aeef]' : ' text-white')}
     >
       {children}
     </Link>

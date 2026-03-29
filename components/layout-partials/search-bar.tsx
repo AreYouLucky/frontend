@@ -84,14 +84,14 @@ export default function SearchBar() {
           setIsMobileSearchOpen((current) => !current);
           setIsOpen(false);
         }}
-        className="flex h-10 w-10 items-center justify-center rounded-xl border border-white/60 bg-zinc-900/20 text-white transition duration-300 hover:bg-black/40 md:hidden"
+        className="flex h-10 w-10 focus:border-[#00aeef]/70  items-center justify-center rounded-xl border border-white/60  bg-zinc-900/20 text-white transition duration-300 hover:bg-black/40 md:hidden"
         aria-label="Open search"
       >
         <FaSearch className="text-sm" />
       </button>
 
       <div className="hidden md:block">
-        <div className="w-full group flex items-center gap-2 overflow-hidden rounded-xl border border-white/60 bg-zinc-900/10 px-2 py-px text-white transition duration-300 focus-within:bg-black/50 lg:gap-3 lg:px-3">
+        <div className="w-full group flex items-center gap-2 overflow-hidden rounded-xl border  border-white/60 hover:border-[#00aeef]/70  bg-zinc-900/10 px-2 py-px text-white transition duration-300 focus-within:bg-black/50 lg:gap-3 lg:px-3">
           <div className="flex h-7 w-4 shrink-0 items-center justify-center md:h-9 md:w-9">
             <FaSearch className="text-sm" />
           </div>
@@ -104,7 +104,7 @@ export default function SearchBar() {
             }}
             onFocus={() => setIsOpen(true)}
             placeholder="Explore science stories..."
-            className="w-full bg-transparent text-[11px] font-semibold uppercase tracking-wider text-white outline-none placeholder:text-[8px] placeholder:text-white/80 focus-within:text-white focus-within:placeholder:text-gray-400 md:placeholder:text-[10px] lg:text-[12px] lg:placeholder:text-[10.5px]"
+            className="w-full bg-transparent text-[11px] font-semibold uppercase tracking-wider text-white outline-none placeholder:text-[8px] placeholder:text-white/80 focus-within:text-white focus-within:placeholder:text-gray-400 md:placeholder:text-[10px] lg:text-[12px] lg:placeholder:text-[10.5px] "
           />
           <Link href="/advance-search" className="border-l border-white/80 pl-2">
             <LuFolderSearch2 className="text-xl duration-300 hover:scale-110" />
@@ -113,12 +113,11 @@ export default function SearchBar() {
       </div>
 
       {(showResults || isMobileSearchOpen) && (
-        <div className="absolute right-0 z-50 w-[min(20rem,calc(100vw-1.5rem))] overflow-hidden rounded-xl border border-white/50 bg-zinc-900/90 px-3 text-white shadow-xl shadow-[#00aeef]/40 backdrop-blur fade-down md:left-0 md:right-auto top-auto md:mt-7 md:w-full md:scale-110 lg:mt-4 lg:scale-105">
+        <div className="absolute right-0 z-50 w-[min(20rem,calc(100vw-1.5rem))] overflow-hidden rounded-xl border border-[#00aeef]/50 bg-zinc-900/90 px-3 text-white shadow-xl shadow-[#00aeef]/40 backdrop-blur fade-down md:left-0 md:right-auto top-auto md:mt-7 md:w-full md:scale-110 lg:mt-4 lg:scale-105">
           {isMobileSearchOpen && (
             <div className="py-4 space-y-3">
-              {/* Search Row */}
               <div className="flex items-center gap-2 md:hidden">
-                <div className="flex flex-1 items-center gap-2 rounded-2xl border border-white/30 bg-white/10 backdrop-blur-md px-3 py-2 shadow-sm focus-within:ring-2 focus-within:ring-sky-400/50 transition">
+                <div className="flex flex-1 items-center gap-2 rounded-xl border border-white/20 focus:border-[#00aeef]/70  bg-white/10 backdrop-blur-md px-3 py-2 shadow-sm focus-within:ring-2 focus-within:ring-sky-400/50 transition">
                   <FaSearch className="text-white/70 text-sm" />
                   <input
                     ref={inputRef}
@@ -137,14 +136,14 @@ export default function SearchBar() {
                 <button
                   type="button"
                   onClick={closeAllPanels}
-                  className="rounded-2xl border border-white/20 bg-white/5 px-3 py-2 text-[11px] font-medium text-white/70 transition hover:bg-white/10 hover:text-white"
+                  className="rounded-xl border border-white/20 bg-white/5 px-3 py-2 text-[11px] font-medium text-white/70 transition hover:bg-white/10 hover:text-white"
                 >
                   Close
                 </button>
               </div>
 
               <Link href="/advance-search">
-                <div className=" group flex items-center justify-between rounded-2xl border border-white/20 bg-[#004a95]/70 px-4 py-2 backdrop-blur-md shadow-md transition hover:scale-[1.02] hover:from-sky-500/30 hover:to-indigo-500/30">
+                <div className=" group flex items-center justify-between rounded-xl border border-white/20 bg-[#004a95]/70 px-4 py-2 backdrop-blur-md shadow-md transition hover:scale-[1.02] hover:from-sky-500/30 hover:to-indigo-500/30">
                   <span className="text-sm font-semibold tracking-wide text-white">
                     Advanced Search
                   </span>
