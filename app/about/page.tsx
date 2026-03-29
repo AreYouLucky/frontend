@@ -170,9 +170,9 @@ export default function AboutPage() {
       </section>
 
       <section className="mx-auto w-full px-3 pb-14 md:px-8 md:pb-15 border-b border-white/10">
-        <div className=" pb-3 px-3 md:p-10">
+        <div className=" pb-3 md:p-10">
           <h2 className="text-2xl font-bold md:text-3xl">Who are we?</h2>
-          <div className="mt-6 grid gap-5 text-sm leading-7 text-zinc-200 md:grid-cols-2 md:text-base md:leading-8 text-justify space-x-8 space-y-8">
+          <div className="mt-6 grid gap-5 text-sm leading-7 text-zinc-200 md:grid-cols-2 md:text-base md:leading-8 text-justify md:space-x-8 space-y-8">
             <p>
               {`              
               The Department of Science and Technology has often been referred to as the
@@ -200,7 +200,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="mx-auto w-full max-w-7xl px-4 pb-20 md:px-8 md:pb-24 pt-10">
+      <section className="mx-auto w-full  px-3 pb-20 md:px-8 md:pb-24 pt-10">
         <div className="mb-10 text-center md:mb-12">
           <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#00aeef]">
             Milestones
@@ -213,7 +213,7 @@ export default function AboutPage() {
         </div>
 
         <div className="relative pl-6 md:pl-10">
-          <div className="space-y-5 md:space-y-6">
+          <div className=" grid grid-cols-1 md:grid-cols-2 gap-5">
             {timeline.map((item) => (
               <article
                 key={item.year}
