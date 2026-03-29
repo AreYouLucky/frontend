@@ -8,7 +8,6 @@ import { LayoutGroup } from "framer-motion";
 import { useGetProgramSeasonsPosts } from "@/hooks/program/program-hooks";
 import PageLoading from "../ui/page-loading";
 import HoverCard from "../ui/hover-card";
-import { ChevronDown } from "lucide-react";
 
 export default function ProgramSeasons({
     code,

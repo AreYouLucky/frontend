@@ -136,7 +136,7 @@ export default function AboutPage() {
       <section className="relative z-10 mx-auto -mt-6 w-full   pb-10 md:-mt-24 md:pb-14">
         <div className="overflow-hidden border-y border-white/10 bg-zinc-950/80 shadow-[0_24px_80px_rgba(0,0,0,0.55)] backdrop-blur">
           <div className="h-1 w-full bg-linear-to-r from-transparent via-[#0931e5] to-transparent" />
-          <div className="grid gap-8 p-6 md:grid-cols-[1.15fr_1fr] md:p-10 lg:p-20">
+          <div className="grid gap-8 py-6 px-3 md:grid-cols-[1.15fr_1fr] md:p-10 lg:p-20">
             <div className="fade-right">
               <p className="mb-4 inline-flex rounded-full border border-[#00aeef]/40 bg-[#004a95]/15 px-3 py-1 text-xs font-semibold  tracking-[0.2em] text-white">
                 ABOUT DOSTv
@@ -169,8 +169,8 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="mx-auto w-full px-4 pb-14 md:px-8 md:pb-15 border-b border-white/10">
-        <div className=" p-6 md:p-10">
+      <section className="mx-auto w-full px-3 pb-14 md:px-8 md:pb-15 border-b border-white/10">
+        <div className=" pb-3 px-3 md:p-10">
           <h2 className="text-2xl font-bold md:text-3xl">Who are we?</h2>
           <div className="mt-6 grid gap-5 text-sm leading-7 text-zinc-200 md:grid-cols-2 md:text-base md:leading-8 text-justify space-x-8 space-y-8">
             <p>
@@ -213,14 +213,12 @@ export default function AboutPage() {
         </div>
 
         <div className="relative pl-6 md:pl-10">
-          <div className="absolute left-3.5 top-0 h-full w-px bg-linear-to-b from-[#ffffff] via-zinc-500/40 to-transparent md:left-5" />
           <div className="space-y-5 md:space-y-6">
             {timeline.map((item) => (
               <article
                 key={item.year}
                 className="relative rounded-2xl border border-white/60  p-5 shadow-[0_10px_32px_rgba(0,0,0,0.42)] transition duration-300 hover:border-[#00aeef]/50 md:p-6"
               >
-                <span className="absolute -left-[1.15rem] top-8 h-3.5 w-3.5 rounded-full border-2 border-zinc-900 bg-[#ffffff] shadow-[#fcfcfc] md:-left-[1.65rem]" />
                 <h3 className="text-2xl font-black text-white">{item.year}</h3>
                 <ul className="mt-3 list-disc space-y-2 pl-5 text-zinc-200 marker:text-[#ffffff]">
                   {item.highlights.map((highlight) => (

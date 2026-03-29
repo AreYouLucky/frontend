@@ -69,9 +69,9 @@ export default async function PartnersPage() {
     return (
         <div className='overflow-hidden bg-[#050505]/50 text-white'>
 
-            <section className='relative isolate lg:pt-24 md:pt-20 pt-20 '>
+            <section className='relative isolate lg:pt-24 md:pt-20 pt-18 '>
 
-                <div className='relative mx-auto flex flex-col-reverse lg:flex-row items-center w-full md:gap-10 px-8 pb-12 md:px-15 lg:pt-12 lg:pb-30 '>
+                <div className='relative mx-auto flex flex-col-reverse lg:flex-row items-center w-full md:gap-10 px-3 pb-12 md:px-15 lg:pt-12 lg:pb-30 '>
                     <div className='fade-up w-full'>
                         <h1 className='mt-5 max-w-4xl text-4xl font-black  lg:text-5xl md:text-4xl'>
                             Partner with DOSTv
@@ -108,12 +108,12 @@ export default async function PartnersPage() {
 
                 </div>
             </section>
-            <div className="lg:px-8 md:px-5 px-5">
+            <div className="lg:px-8 md:px-5 px-3">
                 <div className="border-b border-white/40"></div>
             </div>
 
-            <section id='partners-grid' className='mx-auto w-full  px-8 md:px-15 py-8 md:py-15 z-10 fade-right'>
-                <div className='mb-8 flex flex-col gap-4 md:mb-10 md:flex-row md:items-end md:justify-between'>
+            <section id='partners-grid' className='mx-auto w-full  px-3 md:px-15 py-4 md:py-15 z-10 fade-right'>
+                <div className='mb-3 flex flex-col gap-4 md:mb-10 md:flex-row md:items-end md:justify-between'>
                     <div>
                         <h2 className='mt-2 text-2xl font-black md:text-3xl px-4 border-l-2 border-white/40 text-white/80 relative'>
                             Partners
