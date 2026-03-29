@@ -55,7 +55,7 @@ export default function Navbar({
 
     return (
         <header
-            className="absolute z-40 h-16 md:h-18 lg:h-16 w-full  backdrop-blur-md "
+            className="absolute top-0 z-40 h-16 md:h-18 lg:h-16 w-full  backdrop-blur-md "
             style={{
                 background: `rgba(0,0,0,${opacity})`,
                 backdropFilter: opacity > 0.3 ? "blur(6px)" : "none",
@@ -63,20 +63,20 @@ export default function Navbar({
         >
             <div className="flex h-full items-center justify-between md:px-6 px-2">
                 <div className="flex ">
-                    <div className="h-auto w-20 md:w-36">
+                    <div className="h-auto w-36">
                         <Link href="/" className="flex items-center md:gap-3 gap-2">
                             <Image
                                 src="/storage/images/logos/DOST.png"
                                 alt="DOSTV Logo"
                                 width={120} height={100}
-                                className="h-auto w-5 md:w-7"
+                                className="h-auto w-7"
                                 priority
                             />
                             <Image
                                 src="/storage/images/logos/dostv.png"
                                 alt="DOSTV Logo"
                                 width={120} height={100}
-                                className="h-auto w-20 md:w-25"
+                                className="h-auto w-25"
                                 priority
                             />
                         </Link>

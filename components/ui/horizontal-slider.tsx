@@ -18,8 +18,8 @@ export default function HorizontalSlider({
         loop: true,
         drag: !disabled,
         slides: {
-            perView: 3,
-            spacing: 5,
+            perView: 2,
+            spacing: 15,
             origin: "auto",
         },
         slideChanged(slider) {
