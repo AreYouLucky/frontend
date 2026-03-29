@@ -200,8 +200,8 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="mx-auto w-full  px-3 pb-20 md:px-8 md:pb-24 pt-10">
-        <div className="mb-10 text-center md:mb-12">
+      <section className="mx-auto w-full  px-3 pb-10 md:px-8 md:pb-24 pt-10">
+        <div className="mb-4 text-center md:mb-10">
           <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#00aeef]">
             Milestones
           </p>
@@ -212,7 +212,7 @@ export default function AboutPage() {
           </p>
         </div>
 
-        <div className="relative pl-6 md:pl-10">
+        <div className="relative ">
           <div className=" grid grid-cols-1 md:grid-cols-2 gap-5">
             {timeline.map((item) => (
               <article
